@@ -1,0 +1,5 @@
+===================================================================
+Input matrix: ../../suitesparse_mats/Queen_4147/Queen_4147.mtx, K=2048, iters=5
+
+=== SpMM full GPU (CSR resident) ===
+Matrix: m=4147110, n=4147110, nnz=329499284, K=2048, iters=5

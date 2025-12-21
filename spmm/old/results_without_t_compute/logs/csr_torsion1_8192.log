@@ -1,0 +1,85 @@
+===================================================================
+Input matrix: ../../suitesparse_mats/small_matrices/torsion1/torsion1.mtx, K=8192, iters=5
+
+=== SpMM full GPU (CSR resident) ===
+Matrix: m=40000, n=40000, nnz=197608, K=8192, iters=5
+Total SpMM time over 5 iters = 32.8499 ms
+Average SpMM time per iter = 6.56998 ms
+
+==== SUMMARY ====
+End-to-end          = 813.372 ms
+t_csr           = 17.6899 ms
+t_gpu_alloc     = 586.89 ms
+t_cpu_alloc     = 145.417 ms
+t_h2d_ms     = 0.059424 ms
+t_spmm_ms    = 32.8499 ms
+t_d2h_ms       = 8.82317 ms
+
+===================================================================
+Input matrix: ../../suitesparse_mats/small_matrices/torsion1/torsion1.mtx, K=8192, iters=5
+
+=== SpMM full GPU (CSR resident) ===
+Matrix: m=40000, n=40000, nnz=197608, K=8192, iters=5
+Total SpMM time over 5 iters = 32.8979 ms
+Average SpMM time per iter = 6.57957 ms
+
+==== SUMMARY ====
+End-to-end          = 824.445 ms
+t_csr           = 17.75 ms
+t_gpu_alloc     = 586.881 ms
+t_cpu_alloc     = 151.626 ms
+t_h2d_ms     = 0.059104 ms
+t_spmm_ms    = 32.8979 ms
+t_d2h_ms       = 8.82506 ms
+
+===================================================================
+Input matrix: ../../suitesparse_mats/small_matrices/torsion1/torsion1.mtx, K=8192, iters=5
+
+=== SpMM full GPU (CSR resident) ===
+Matrix: m=40000, n=40000, nnz=197608, K=8192, iters=5
+Total SpMM time over 5 iters = 32.891 ms
+Average SpMM time per iter = 6.5782 ms
+
+==== SUMMARY ====
+End-to-end          = 825.599 ms
+t_csr           = 17.7991 ms
+t_gpu_alloc     = 587.38 ms
+t_cpu_alloc     = 152.269 ms
+t_h2d_ms     = 0.06496 ms
+t_spmm_ms    = 32.891 ms
+t_d2h_ms       = 8.82234 ms
+
+===================================================================
+Input matrix: ../../suitesparse_mats/small_matrices/torsion1/torsion1.mtx, K=8192, iters=5
+
+=== SpMM full GPU (CSR resident) ===
+Matrix: m=40000, n=40000, nnz=197608, K=8192, iters=5
+Total SpMM time over 5 iters = 32.953 ms
+Average SpMM time per iter = 6.5906 ms
+
+==== SUMMARY ====
+End-to-end          = 823.75 ms
+t_csr           = 17.7679 ms
+t_gpu_alloc     = 587.196 ms
+t_cpu_alloc     = 152.853 ms
+t_h2d_ms     = 0.061568 ms
+t_spmm_ms    = 32.953 ms
+t_d2h_ms       = 8.82259 ms
+
+===================================================================
+Input matrix: ../../suitesparse_mats/small_matrices/torsion1/torsion1.mtx, K=8192, iters=5
+
+=== SpMM full GPU (CSR resident) ===
+Matrix: m=40000, n=40000, nnz=197608, K=8192, iters=5
+Total SpMM time over 5 iters = 32.9067 ms
+Average SpMM time per iter = 6.58133 ms
+
+==== SUMMARY ====
+End-to-end          = 817.021 ms
+t_csr           = 17.7372 ms
+t_gpu_alloc     = 582.236 ms
+t_cpu_alloc     = 152.178 ms
+t_h2d_ms     = 0.057088 ms
+t_spmm_ms    = 32.9067 ms
+t_d2h_ms       = 8.8248 ms
+

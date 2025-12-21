@@ -1,0 +1,85 @@
+===================================================================
+Input matrix: ../../suitesparse_mats/small_matrices/Goodwin_095/Goodwin_095.mtx, K=8192, iters=5
+
+=== SpMM full GPU (CSR resident) ===
+Matrix: m=100037, n=100037, nnz=3226066, K=8192, iters=5
+Total SpMM time over 5 iters = 376.704 ms
+Average SpMM time per iter = 75.3409 ms
+
+==== SUMMARY ====
+End-to-end          = 2771.92 ms
+t_csr           = 812.653 ms
+t_gpu_alloc     = 1131.51 ms
+t_cpu_alloc     = 370.16 ms
+t_h2d_ms     = 0.166048 ms
+t_spmm_ms    = 376.704 ms
+t_d2h_ms       = 22.1582 ms
+
+===================================================================
+Input matrix: ../../suitesparse_mats/small_matrices/Goodwin_095/Goodwin_095.mtx, K=8192, iters=5
+
+=== SpMM full GPU (CSR resident) ===
+Matrix: m=100037, n=100037, nnz=3226066, K=8192, iters=5
+Total SpMM time over 5 iters = 376.824 ms
+Average SpMM time per iter = 75.3648 ms
+
+==== SUMMARY ====
+End-to-end          = 2780.81 ms
+t_csr           = 816.769 ms
+t_gpu_alloc     = 1135.88 ms
+t_cpu_alloc     = 369.172 ms
+t_h2d_ms     = 0.17392 ms
+t_spmm_ms    = 376.824 ms
+t_d2h_ms       = 22.1576 ms
+
+===================================================================
+Input matrix: ../../suitesparse_mats/small_matrices/Goodwin_095/Goodwin_095.mtx, K=8192, iters=5
+
+=== SpMM full GPU (CSR resident) ===
+Matrix: m=100037, n=100037, nnz=3226066, K=8192, iters=5
+Total SpMM time over 5 iters = 376.5 ms
+Average SpMM time per iter = 75.3001 ms
+
+==== SUMMARY ====
+End-to-end          = 2794.95 ms
+t_csr           = 820.456 ms
+t_gpu_alloc     = 1146.44 ms
+t_cpu_alloc     = 370.979 ms
+t_h2d_ms     = 0.16336 ms
+t_spmm_ms    = 376.5 ms
+t_d2h_ms       = 22.1461 ms
+
+===================================================================
+Input matrix: ../../suitesparse_mats/small_matrices/Goodwin_095/Goodwin_095.mtx, K=8192, iters=5
+
+=== SpMM full GPU (CSR resident) ===
+Matrix: m=100037, n=100037, nnz=3226066, K=8192, iters=5
+Total SpMM time over 5 iters = 376.758 ms
+Average SpMM time per iter = 75.3517 ms
+
+==== SUMMARY ====
+End-to-end          = 2776.9 ms
+t_csr           = 814.792 ms
+t_gpu_alloc     = 1133.67 ms
+t_cpu_alloc     = 370.505 ms
+t_h2d_ms     = 0.16368 ms
+t_spmm_ms    = 376.758 ms
+t_d2h_ms       = 22.1322 ms
+
+===================================================================
+Input matrix: ../../suitesparse_mats/small_matrices/Goodwin_095/Goodwin_095.mtx, K=8192, iters=5
+
+=== SpMM full GPU (CSR resident) ===
+Matrix: m=100037, n=100037, nnz=3226066, K=8192, iters=5
+Total SpMM time over 5 iters = 376.618 ms
+Average SpMM time per iter = 75.3236 ms
+
+==== SUMMARY ====
+End-to-end          = 2770.52 ms
+t_csr           = 815.769 ms
+t_gpu_alloc     = 1131.2 ms
+t_cpu_alloc     = 364.821 ms
+t_h2d_ms     = 0.169952 ms
+t_spmm_ms    = 376.618 ms
+t_d2h_ms       = 22.134 ms
+

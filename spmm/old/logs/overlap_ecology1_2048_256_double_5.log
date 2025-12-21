@@ -1,0 +1,80 @@
+--- GPU Memory Usage ---
+Total GPU Memory: 95.00 GB
+Free GPU Memory:  94.45 GB
+Used GPU Memory:  0.55 GB
+------------------------
+
+Process RSS:  30.71 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=4288.68 ms
+t_cpu_alloc=2111.67 ms
+t_gpu_alloc=1429.7 ms
+t_h2d_ms=78.0989 ms
+t_d2h_ms=78.3341 ms
+t_spmm_ms=48.3203 ms
+
+--- GPU Memory Usage ---
+Total GPU Memory: 95.00 GB
+Free GPU Memory:  94.45 GB
+Used GPU Memory:  0.55 GB
+------------------------
+
+Process RSS:  30.71 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=4296.27 ms
+t_cpu_alloc=2109.28 ms
+t_gpu_alloc=1430.5 ms
+t_h2d_ms=78.0889 ms
+t_d2h_ms=78.3342 ms
+t_spmm_ms=48.2892 ms
+
+--- GPU Memory Usage ---
+Total GPU Memory: 95.00 GB
+Free GPU Memory:  94.45 GB
+Used GPU Memory:  0.55 GB
+------------------------
+
+Process RSS:  30.71 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=4300.14 ms
+t_cpu_alloc=2107.3 ms
+t_gpu_alloc=1428.41 ms
+t_h2d_ms=78.1472 ms
+t_d2h_ms=78.3634 ms
+t_spmm_ms=48.1866 ms
+
+--- GPU Memory Usage ---
+Total GPU Memory: 95.00 GB
+Free GPU Memory:  94.45 GB
+Used GPU Memory:  0.55 GB
+------------------------
+
+Process RSS:  30.71 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=4310.51 ms
+t_cpu_alloc=2122.81 ms
+t_gpu_alloc=1430.27 ms
+t_h2d_ms=78.146 ms
+t_d2h_ms=78.3614 ms
+t_spmm_ms=48.233 ms
+
+--- GPU Memory Usage ---
+Total GPU Memory: 95.00 GB
+Free GPU Memory:  94.45 GB
+Used GPU Memory:  0.55 GB
+------------------------
+
+Process RSS:  30.71 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=4272.84 ms
+t_cpu_alloc=2094.59 ms
+t_gpu_alloc=1418.49 ms
+t_h2d_ms=78.03 ms
+t_d2h_ms=78.3636 ms
+t_spmm_ms=48.18 ms
+

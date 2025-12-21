@@ -1,0 +1,85 @@
+===================================================================
+Input matrix: ../../suitesparse_mats/small_matrices/GL7d14/GL7d14.mtx, K=16384, iters=5
+
+=== SpMM full GPU (CSR resident) ===
+Matrix: m=171375, n=47271, nnz=1831183, K=16384, iters=5
+Total SpMM time over 5 iters = 1129.5 ms
+Average SpMM time per iter = 225.9 ms
+
+==== SUMMARY ====
+End-to-end          = 5049.12 ms
+t_csr           = 261.789 ms
+t_gpu_alloc     = 2218.68 ms
+t_cpu_alloc     = 1212.44 ms
+t_h2d_ms     = 0.1152 ms
+t_spmm_ms    = 1129.5 ms
+t_d2h_ms       = 75.9704 ms
+
+===================================================================
+Input matrix: ../../suitesparse_mats/small_matrices/GL7d14/GL7d14.mtx, K=16384, iters=5
+
+=== SpMM full GPU (CSR resident) ===
+Matrix: m=171375, n=47271, nnz=1831183, K=16384, iters=5
+Total SpMM time over 5 iters = 1129.49 ms
+Average SpMM time per iter = 225.897 ms
+
+==== SUMMARY ====
+End-to-end          = 5080.29 ms
+t_csr           = 261.165 ms
+t_gpu_alloc     = 2216.25 ms
+t_cpu_alloc     = 1242.83 ms
+t_h2d_ms     = 0.121696 ms
+t_spmm_ms    = 1129.49 ms
+t_d2h_ms       = 75.9718 ms
+
+===================================================================
+Input matrix: ../../suitesparse_mats/small_matrices/GL7d14/GL7d14.mtx, K=16384, iters=5
+
+=== SpMM full GPU (CSR resident) ===
+Matrix: m=171375, n=47271, nnz=1831183, K=16384, iters=5
+Total SpMM time over 5 iters = 1129.47 ms
+Average SpMM time per iter = 225.895 ms
+
+==== SUMMARY ====
+End-to-end          = 5072.39 ms
+t_csr           = 262.548 ms
+t_gpu_alloc     = 2209.22 ms
+t_cpu_alloc     = 1240.79 ms
+t_h2d_ms     = 0.123904 ms
+t_spmm_ms    = 1129.47 ms
+t_d2h_ms       = 75.9488 ms
+
+===================================================================
+Input matrix: ../../suitesparse_mats/small_matrices/GL7d14/GL7d14.mtx, K=16384, iters=5
+
+=== SpMM full GPU (CSR resident) ===
+Matrix: m=171375, n=47271, nnz=1831183, K=16384, iters=5
+Total SpMM time over 5 iters = 1129.49 ms
+Average SpMM time per iter = 225.898 ms
+
+==== SUMMARY ====
+End-to-end          = 5062.21 ms
+t_csr           = 261.934 ms
+t_gpu_alloc     = 2205.62 ms
+t_cpu_alloc     = 1237.32 ms
+t_h2d_ms     = 0.123712 ms
+t_spmm_ms    = 1129.49 ms
+t_d2h_ms       = 75.9631 ms
+
+===================================================================
+Input matrix: ../../suitesparse_mats/small_matrices/GL7d14/GL7d14.mtx, K=16384, iters=5
+
+=== SpMM full GPU (CSR resident) ===
+Matrix: m=171375, n=47271, nnz=1831183, K=16384, iters=5
+Total SpMM time over 5 iters = 1129.37 ms
+Average SpMM time per iter = 225.873 ms
+
+==== SUMMARY ====
+End-to-end          = 5064.14 ms
+t_csr           = 262.007 ms
+t_gpu_alloc     = 2198.11 ms
+t_cpu_alloc     = 1242.97 ms
+t_h2d_ms     = 0.123872 ms
+t_spmm_ms    = 1129.37 ms
+t_d2h_ms       = 75.9535 ms
+

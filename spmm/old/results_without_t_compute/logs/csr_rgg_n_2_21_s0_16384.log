@@ -1,0 +1,5 @@
+===================================================================
+Input matrix: ../../suitesparse_mats/rgg_n_2_21_s0/rgg_n_2_21_s0.mtx, K=16384, iters=5
+
+=== SpMM full GPU (CSR resident) ===
+Matrix: m=2097152, n=2097152, nnz=19317326, K=16384, iters=5

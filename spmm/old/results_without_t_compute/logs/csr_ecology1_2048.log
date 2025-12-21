@@ -1,0 +1,85 @@
+===================================================================
+Input matrix: ../../suitesparse_mats/ecology1/ecology1.mtx, K=2048, iters=5
+
+=== SpMM full GPU (CSR resident) ===
+Matrix: m=1000000, n=1000000, nnz=4996000, K=2048, iters=5
+Total SpMM time over 5 iters = 194.792 ms
+Average SpMM time per iter = 38.9585 ms
+
+==== SUMMARY ====
+End-to-end          = 4216.15 ms
+t_csr           = 454.349 ms
+t_gpu_alloc     = 2493.35 ms
+t_cpu_alloc     = 891 ms
+t_h2d_ms     = 0.244352 ms
+t_spmm_ms    = 194.792 ms
+t_d2h_ms       = 55.3798 ms
+
+===================================================================
+Input matrix: ../../suitesparse_mats/ecology1/ecology1.mtx, K=2048, iters=5
+
+=== SpMM full GPU (CSR resident) ===
+Matrix: m=1000000, n=1000000, nnz=4996000, K=2048, iters=5
+Total SpMM time over 5 iters = 194.633 ms
+Average SpMM time per iter = 38.9266 ms
+
+==== SUMMARY ====
+End-to-end          = 4223.8 ms
+t_csr           = 452.551 ms
+t_gpu_alloc     = 2497.77 ms
+t_cpu_alloc     = 896.047 ms
+t_h2d_ms     = 0.24384 ms
+t_spmm_ms    = 194.633 ms
+t_d2h_ms       = 55.3718 ms
+
+===================================================================
+Input matrix: ../../suitesparse_mats/ecology1/ecology1.mtx, K=2048, iters=5
+
+=== SpMM full GPU (CSR resident) ===
+Matrix: m=1000000, n=1000000, nnz=4996000, K=2048, iters=5
+Total SpMM time over 5 iters = 194.737 ms
+Average SpMM time per iter = 38.9474 ms
+
+==== SUMMARY ====
+End-to-end          = 4212.41 ms
+t_csr           = 457.038 ms
+t_gpu_alloc     = 2495.24 ms
+t_cpu_alloc     = 879.813 ms
+t_h2d_ms     = 0.247936 ms
+t_spmm_ms    = 194.737 ms
+t_d2h_ms       = 55.5642 ms
+
+===================================================================
+Input matrix: ../../suitesparse_mats/ecology1/ecology1.mtx, K=2048, iters=5
+
+=== SpMM full GPU (CSR resident) ===
+Matrix: m=1000000, n=1000000, nnz=4996000, K=2048, iters=5
+Total SpMM time over 5 iters = 194.664 ms
+Average SpMM time per iter = 38.9328 ms
+
+==== SUMMARY ====
+End-to-end          = 4210.95 ms
+t_csr           = 454.506 ms
+t_gpu_alloc     = 2495.7 ms
+t_cpu_alloc     = 880.947 ms
+t_h2d_ms     = 0.245248 ms
+t_spmm_ms    = 194.664 ms
+t_d2h_ms       = 55.3705 ms
+
+===================================================================
+Input matrix: ../../suitesparse_mats/ecology1/ecology1.mtx, K=2048, iters=5
+
+=== SpMM full GPU (CSR resident) ===
+Matrix: m=1000000, n=1000000, nnz=4996000, K=2048, iters=5
+Total SpMM time over 5 iters = 194.763 ms
+Average SpMM time per iter = 38.9526 ms
+
+==== SUMMARY ====
+End-to-end          = 4211.85 ms
+t_csr           = 451.31 ms
+t_gpu_alloc     = 2490.24 ms
+t_cpu_alloc     = 894.418 ms
+t_h2d_ms     = 0.242784 ms
+t_spmm_ms    = 194.763 ms
+t_d2h_ms       = 55.3785 ms
+

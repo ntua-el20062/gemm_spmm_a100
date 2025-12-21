@@ -1,0 +1,17 @@
+===================================================================
+Input matrix: ../../suitesparse_mats/small_matrices/Goodwin_095/Goodwin_095.mtx, K=16384, iters=5
+
+=== SpMM full GPU (CSR resident) ===
+Matrix: m=100037, n=100037, nnz=3226066, K=16384, iters=5
+Total SpMM time over 5 iters = 752.744 ms
+Average SpMM time per iter = 150.549 ms
+
+==== SUMMARY ====
+End-to-end          = 4467.06 ms
+t_csr           = 815.402 ms
+t_gpu_alloc     = 2031.82 ms
+t_cpu_alloc     = 715.693 ms
+t_h2d_ms     = 0.160864 ms
+t_spmm_ms    = 752.744 ms
+t_d2h_ms       = 44.3245 ms
+

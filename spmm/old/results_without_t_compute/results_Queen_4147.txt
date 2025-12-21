@@ -1,0 +1,563 @@
+=============================================================
+               MATRIX: Queen_4147
+=============================================================
+------------------------------------------------------
+Running overlap on matrix: Queen_4147
+Config: [2048 64 double 5]   NRUNS=5
+Log: logs/overlap_Queen_4147_2048_64_double_5.log
+  Run 1 / 5...
+--- GPU Memory Usage ---
+Total GPU Memory: 95.00 GB
+Free GPU Memory:  94.43 GB
+Used GPU Memory:  0.57 GB
+------------------------
+
+Process RSS:  130.39 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=46388 ms
+t_cpu_alloc=5372.76 ms
+t_gpu_alloc=1759.41 ms
+t_h2d_ms=181.031 ms
+t_d2h_ms=241.295 ms
+t_spmm_ms=1907.03 ms
+  Run 2 / 5...
+--- GPU Memory Usage ---
+Total GPU Memory: 95.00 GB
+Free GPU Memory:  94.43 GB
+Used GPU Memory:  0.57 GB
+------------------------
+
+Process RSS:  130.39 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=46048.2 ms
+t_cpu_alloc=5344.63 ms
+t_gpu_alloc=1763.63 ms
+t_h2d_ms=181.33 ms
+t_d2h_ms=241.293 ms
+t_spmm_ms=1906.57 ms
+  Run 3 / 5...
+--- GPU Memory Usage ---
+Total GPU Memory: 95.00 GB
+Free GPU Memory:  94.43 GB
+Used GPU Memory:  0.57 GB
+------------------------
+
+Process RSS:  130.39 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=46019.8 ms
+t_cpu_alloc=5356.86 ms
+t_gpu_alloc=1755.43 ms
+t_h2d_ms=181.533 ms
+t_d2h_ms=241.303 ms
+t_spmm_ms=1906.84 ms
+  Run 4 / 5...
+--- GPU Memory Usage ---
+Total GPU Memory: 95.00 GB
+Free GPU Memory:  94.44 GB
+Used GPU Memory:  0.56 GB
+------------------------
+
+Process RSS:  130.39 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=46038 ms
+t_cpu_alloc=5371.3 ms
+t_gpu_alloc=1755.05 ms
+t_h2d_ms=181.151 ms
+t_d2h_ms=241.319 ms
+t_spmm_ms=1906.77 ms
+  Run 5 / 5...
+--- GPU Memory Usage ---
+Total GPU Memory: 95.00 GB
+Free GPU Memory:  94.43 GB
+Used GPU Memory:  0.57 GB
+------------------------
+
+Process RSS:  130.39 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=46062.3 ms
+t_cpu_alloc=5384.6 ms
+t_gpu_alloc=1751.96 ms
+t_h2d_ms=181.035 ms
+t_d2h_ms=241.294 ms
+t_spmm_ms=1906.9 ms
+Computing averages...
+
+=== Averages for overlap on Queen_4147, cfg=[2048 64 double 5] over 5 runs ===
+  End2End      = 46111.260 ms
+  t_cpu_alloc  = 5366.030 ms
+  t_gpu_alloc  = 1757.096 ms
+  t_h2d_ms     = 181.216 ms
+  t_d2h_ms     = 241.301 ms
+  t_spmm_ms    = 1906.822 ms
+
+------------------------------------------------------
+Running overlap on matrix: Queen_4147
+Config: [2048 256 double 5]   NRUNS=5
+Log: logs/overlap_Queen_4147_2048_256_double_5.log
+  Run 1 / 5...
+--- GPU Memory Usage ---
+Total GPU Memory: 95.00 GB
+Free GPU Memory:  94.43 GB
+Used GPU Memory:  0.57 GB
+------------------------
+
+Process RSS:  130.39 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=50443 ms
+t_cpu_alloc=5413.42 ms
+t_gpu_alloc=6169.33 ms
+t_h2d_ms=181.429 ms
+t_d2h_ms=241.042 ms
+t_spmm_ms=1902.74 ms
+  Run 2 / 5...
+--- GPU Memory Usage ---
+Total GPU Memory: 95.00 GB
+Free GPU Memory:  94.44 GB
+Used GPU Memory:  0.56 GB
+------------------------
+
+Process RSS:  130.39 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=50540.1 ms
+t_cpu_alloc=5389.24 ms
+t_gpu_alloc=6169.88 ms
+t_h2d_ms=181.635 ms
+t_d2h_ms=241.056 ms
+t_spmm_ms=1903.27 ms
+  Run 3 / 5...
+--- GPU Memory Usage ---
+Total GPU Memory: 95.00 GB
+Free GPU Memory:  94.44 GB
+Used GPU Memory:  0.56 GB
+------------------------
+
+Process RSS:  130.39 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=50649.6 ms
+t_cpu_alloc=5477.23 ms
+t_gpu_alloc=6161.31 ms
+t_h2d_ms=181.588 ms
+t_d2h_ms=241.046 ms
+t_spmm_ms=1902.95 ms
+  Run 4 / 5...
+--- GPU Memory Usage ---
+Total GPU Memory: 95.00 GB
+Free GPU Memory:  94.44 GB
+Used GPU Memory:  0.56 GB
+------------------------
+
+Process RSS:  130.39 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=50537.7 ms
+t_cpu_alloc=5368.61 ms
+t_gpu_alloc=6180.67 ms
+t_h2d_ms=181.594 ms
+t_d2h_ms=241.045 ms
+t_spmm_ms=1903.29 ms
+  Run 5 / 5...
+--- GPU Memory Usage ---
+Total GPU Memory: 95.00 GB
+Free GPU Memory:  94.44 GB
+Used GPU Memory:  0.56 GB
+------------------------
+
+Process RSS:  130.39 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=49821.8 ms
+t_cpu_alloc=5360.85 ms
+t_gpu_alloc=6182.27 ms
+t_h2d_ms=181.169 ms
+t_d2h_ms=241.07 ms
+t_spmm_ms=1902.81 ms
+Computing averages...
+
+=== Averages for overlap on Queen_4147, cfg=[2048 256 double 5] over 5 runs ===
+  End2End      = 50398.440 ms
+  t_cpu_alloc  = 5401.870 ms
+  t_gpu_alloc  = 6172.692 ms
+  t_h2d_ms     = 181.483 ms
+  t_d2h_ms     = 241.052 ms
+  t_spmm_ms    = 1903.012 ms
+
+------------------------------------------------------
+Running overlap on matrix: Queen_4147
+Config: [4096 64 double 5]   NRUNS=5
+Log: logs/overlap_Queen_4147_4096_64_double_5.log
+  Run 1 / 5...
+--- GPU Memory Usage ---
+Total GPU Memory: 95.00 GB
+Free GPU Memory:  94.44 GB
+Used GPU Memory:  0.56 GB
+------------------------
+
+Process RSS:  256.95 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=53639.1 ms
+t_cpu_alloc=10488 ms
+t_gpu_alloc=1762.04 ms
+t_h2d_ms=349.698 ms
+t_d2h_ms=483.024 ms
+t_spmm_ms=3812.31 ms
+  Run 2 / 5...
+--- GPU Memory Usage ---
+Total GPU Memory: 95.00 GB
+Free GPU Memory:  94.44 GB
+Used GPU Memory:  0.56 GB
+------------------------
+
+Process RSS:  256.95 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=52998.8 ms
+t_cpu_alloc=10395.8 ms
+t_gpu_alloc=1762.51 ms
+t_h2d_ms=350.469 ms
+t_d2h_ms=482.979 ms
+t_spmm_ms=3810.61 ms
+  Run 3 / 5...
+--- GPU Memory Usage ---
+Total GPU Memory: 95.00 GB
+Free GPU Memory:  94.45 GB
+Used GPU Memory:  0.55 GB
+------------------------
+
+Process RSS:  256.95 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=52864 ms
+t_cpu_alloc=10417.6 ms
+t_gpu_alloc=1750.5 ms
+t_h2d_ms=350.666 ms
+t_d2h_ms=482.997 ms
+t_spmm_ms=3811.83 ms
+  Run 4 / 5...
+--- GPU Memory Usage ---
+Total GPU Memory: 95.00 GB
+Free GPU Memory:  94.45 GB
+Used GPU Memory:  0.55 GB
+------------------------
+
+Process RSS:  256.95 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=52965.8 ms
+t_cpu_alloc=10438.1 ms
+t_gpu_alloc=1767.55 ms
+t_h2d_ms=349.987 ms
+t_d2h_ms=482.91 ms
+t_spmm_ms=3810.52 ms
+  Run 5 / 5...
+--- GPU Memory Usage ---
+Total GPU Memory: 95.00 GB
+Free GPU Memory:  94.44 GB
+Used GPU Memory:  0.56 GB
+------------------------
+
+Process RSS:  256.95 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=52912.4 ms
+t_cpu_alloc=10413.4 ms
+t_gpu_alloc=1761.45 ms
+t_h2d_ms=349.666 ms
+t_d2h_ms=483.14 ms
+t_spmm_ms=3812.71 ms
+Computing averages...
+
+=== Averages for overlap on Queen_4147, cfg=[4096 64 double 5] over 5 runs ===
+  End2End      = 53076.020 ms
+  t_cpu_alloc  = 10430.580 ms
+  t_gpu_alloc  = 1760.810 ms
+  t_h2d_ms     = 350.097 ms
+  t_d2h_ms     = 483.010 ms
+  t_spmm_ms    = 3811.596 ms
+
+------------------------------------------------------
+Running overlap on matrix: Queen_4147
+Config: [4096 256 double 5]   NRUNS=5
+Log: logs/overlap_Queen_4147_4096_256_double_5.log
+  Run 1 / 5...
+--- GPU Memory Usage ---
+Total GPU Memory: 95.00 GB
+Free GPU Memory:  94.45 GB
+Used GPU Memory:  0.55 GB
+------------------------
+
+Process RSS:  256.95 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=57405.8 ms
+t_cpu_alloc=10437.5 ms
+t_gpu_alloc=6170.58 ms
+t_h2d_ms=349.426 ms
+t_d2h_ms=483.882 ms
+t_spmm_ms=3805.78 ms
+  Run 2 / 5...
+--- GPU Memory Usage ---
+Total GPU Memory: 95.00 GB
+Free GPU Memory:  94.45 GB
+Used GPU Memory:  0.55 GB
+------------------------
+
+Process RSS:  256.95 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=57508.8 ms
+t_cpu_alloc=10503.8 ms
+t_gpu_alloc=6162.38 ms
+t_h2d_ms=348.88 ms
+t_d2h_ms=483.901 ms
+t_spmm_ms=3805.98 ms
+  Run 3 / 5...
+--- GPU Memory Usage ---
+Total GPU Memory: 95.00 GB
+Free GPU Memory:  94.45 GB
+Used GPU Memory:  0.55 GB
+------------------------
+
+Process RSS:  256.95 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=57622.5 ms
+t_cpu_alloc=10500.2 ms
+t_gpu_alloc=6208.96 ms
+t_h2d_ms=349.09 ms
+t_d2h_ms=483.784 ms
+t_spmm_ms=3805.74 ms
+  Run 4 / 5...
+--- GPU Memory Usage ---
+Total GPU Memory: 95.00 GB
+Free GPU Memory:  94.45 GB
+Used GPU Memory:  0.55 GB
+------------------------
+
+Process RSS:  256.95 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=57514.4 ms
+t_cpu_alloc=10464.3 ms
+t_gpu_alloc=6181.12 ms
+t_h2d_ms=350.412 ms
+t_d2h_ms=483.782 ms
+t_spmm_ms=3805.46 ms
+  Run 5 / 5...
+--- GPU Memory Usage ---
+Total GPU Memory: 95.00 GB
+Free GPU Memory:  94.45 GB
+Used GPU Memory:  0.55 GB
+------------------------
+
+Process RSS:  256.95 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=57253.8 ms
+t_cpu_alloc=10297.5 ms
+t_gpu_alloc=6160.72 ms
+t_h2d_ms=350.12 ms
+t_d2h_ms=483.829 ms
+t_spmm_ms=3805.37 ms
+Computing averages...
+
+=== Averages for overlap on Queen_4147, cfg=[4096 256 double 5] over 5 runs ===
+  End2End      = 57461.060 ms
+  t_cpu_alloc  = 10440.660 ms
+  t_gpu_alloc  = 6176.752 ms
+  t_h2d_ms     = 349.586 ms
+  t_d2h_ms     = 483.836 ms
+  t_spmm_ms    = 3805.666 ms
+
+------------------------------------------------------
+Running overlap on matrix: Queen_4147
+Config: [8192 64 double 5]   NRUNS=5
+Log: logs/overlap_Queen_4147_8192_64_double_5.log
+  Run 1 / 5...
+--- GPU Memory Usage ---
+Total GPU Memory: 95.00 GB
+Free GPU Memory:  26.72 GB
+Used GPU Memory:  68.28 GB
+------------------------
+
+Process RSS:  510.08 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=72114.3 ms
+t_cpu_alloc=24537.5 ms
+t_gpu_alloc=1750.69 ms
+t_h2d_ms=685.705 ms
+t_d2h_ms=948.562 ms
+t_spmm_ms=7626.49 ms
+  Run 2 / 5...
+--- GPU Memory Usage ---
+Total GPU Memory: 95.00 GB
+Free GPU Memory:  26.04 GB
+Used GPU Memory:  68.96 GB
+------------------------
+
+Process RSS:  510.08 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=72077 ms
+t_cpu_alloc=24499.4 ms
+t_gpu_alloc=1762.99 ms
+t_h2d_ms=686.254 ms
+t_d2h_ms=948.036 ms
+t_spmm_ms=7621.7 ms
+  Run 3 / 5...
+--- GPU Memory Usage ---
+Total GPU Memory: 95.00 GB
+Free GPU Memory:  26.09 GB
+Used GPU Memory:  68.91 GB
+------------------------
+
+Process RSS:  510.08 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=72498.1 ms
+t_cpu_alloc=24710 ms
+t_gpu_alloc=1762.77 ms
+t_h2d_ms=686.37 ms
+t_d2h_ms=948.574 ms
+t_spmm_ms=7625.83 ms
+  Run 4 / 5...
+--- GPU Memory Usage ---
+Total GPU Memory: 95.00 GB
+Free GPU Memory:  26.10 GB
+Used GPU Memory:  68.90 GB
+------------------------
+
+Process RSS:  510.08 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=72399.8 ms
+t_cpu_alloc=24774.2 ms
+t_gpu_alloc=1762.08 ms
+t_h2d_ms=685.873 ms
+t_d2h_ms=948.356 ms
+t_spmm_ms=7622.14 ms
+  Run 5 / 5...
+--- GPU Memory Usage ---
+Total GPU Memory: 95.00 GB
+Free GPU Memory:  26.13 GB
+Used GPU Memory:  68.87 GB
+------------------------
+
+Process RSS:  510.08 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=72538.2 ms
+t_cpu_alloc=24807.5 ms
+t_gpu_alloc=1765.9 ms
+t_h2d_ms=685.225 ms
+t_d2h_ms=948.388 ms
+t_spmm_ms=7625.26 ms
+Computing averages...
+
+=== Averages for overlap on Queen_4147, cfg=[8192 64 double 5] over 5 runs ===
+  End2End      = 72325.480 ms
+  t_cpu_alloc  = 24665.720 ms
+  t_gpu_alloc  = 1760.886 ms
+  t_h2d_ms     = 685.885 ms
+  t_d2h_ms     = 948.383 ms
+  t_spmm_ms    = 7624.284 ms
+
+------------------------------------------------------
+Running overlap on matrix: Queen_4147
+Config: [8192 256 double 5]   NRUNS=5
+Log: logs/overlap_Queen_4147_8192_256_double_5.log
+  Run 1 / 5...
+--- GPU Memory Usage ---
+Total GPU Memory: 95.00 GB
+Free GPU Memory:  25.87 GB
+Used GPU Memory:  69.13 GB
+------------------------
+
+Process RSS:  510.08 GB
+  Run 1 failed with status 1 (likely OOM or similar).
+  Skipping remaining runs for this config.
+Skipping average computation for overlap on Queen_4147, cfg=[8192 256 double 5] due to failure.
+
+------------------------------------------------------
+Running overlap on matrix: Queen_4147
+Config: [16834 64 double 5]   NRUNS=5
+Log: logs/overlap_Queen_4147_16834_64_double_5.log
+  Run 1 / 5...
+  Run 1 failed with status 1 (likely OOM or similar).
+  Skipping remaining runs for this config.
+Skipping average computation for overlap on Queen_4147, cfg=[16834 64 double 5] due to failure.
+
+------------------------------------------------------
+Running overlap on matrix: Queen_4147
+Config: [16834 256 double 5]   NRUNS=5
+Log: logs/overlap_Queen_4147_16834_256_double_5.log
+  Run 1 / 5...
+  Run 1 failed with status 1 (likely OOM or similar).
+  Skipping remaining runs for this config.
+Skipping average computation for overlap on Queen_4147, cfg=[16834 256 double 5] due to failure.
+
+------------------------------------------------------
+Running csr on matrix: Queen_4147
+Config: [2048]   NRUNS=5
+Log: logs/csr_Queen_4147_2048.log
+  Run 1 / 5...
+===================================================================
+Input matrix: ../../suitesparse_mats/Queen_4147/Queen_4147.mtx, K=2048, iters=5
+
+=== SpMM full GPU (CSR resident) ===
+Matrix: m=4147110, n=4147110, nnz=329499284, K=2048, iters=5
+  Run 1 failed with status 1 (likely OOM or similar).
+  Skipping remaining runs for this config.
+Skipping average computation for csr on Queen_4147, cfg=[2048] due to failure.
+
+------------------------------------------------------
+Running csr on matrix: Queen_4147
+Config: [4096]   NRUNS=5
+Log: logs/csr_Queen_4147_4096.log
+  Run 1 / 5...
+===================================================================
+Input matrix: ../../suitesparse_mats/Queen_4147/Queen_4147.mtx, K=4096, iters=5
+
+=== SpMM full GPU (CSR resident) ===
+Matrix: m=4147110, n=4147110, nnz=329499284, K=4096, iters=5
+  Run 1 failed with status 1 (likely OOM or similar).
+  Skipping remaining runs for this config.
+Skipping average computation for csr on Queen_4147, cfg=[4096] due to failure.
+
+------------------------------------------------------
+Running csr on matrix: Queen_4147
+Config: [8192]   NRUNS=5
+Log: logs/csr_Queen_4147_8192.log
+  Run 1 / 5...
+===================================================================
+Input matrix: ../../suitesparse_mats/Queen_4147/Queen_4147.mtx, K=8192, iters=5
+
+=== SpMM full GPU (CSR resident) ===
+Matrix: m=4147110, n=4147110, nnz=329499284, K=8192, iters=5
+  Run 1 failed with status 1 (likely OOM or similar).
+  Skipping remaining runs for this config.
+Skipping average computation for csr on Queen_4147, cfg=[8192] due to failure.
+
+------------------------------------------------------
+Running csr on matrix: Queen_4147
+Config: [16384]   NRUNS=5
+Log: logs/csr_Queen_4147_16384.log
+  Run 1 / 5...
+===================================================================
+Input matrix: ../../suitesparse_mats/Queen_4147/Queen_4147.mtx, K=16384, iters=5
+
+=== SpMM full GPU (CSR resident) ===
+Matrix: m=4147110, n=4147110, nnz=329499284, K=16384, iters=5
+  Run 1 failed with status 1 (likely OOM or similar).
+  Skipping remaining runs for this config.
+Skipping average computation for csr on Queen_4147, cfg=[16384] due to failure.
+

@@ -1,0 +1,85 @@
+===================================================================
+Input matrix: ../../suitesparse_mats/rgg_n_2_20_s0/rgg_n_2_20_s0.mtx, K=2048, iters=5
+
+=== SpMM full GPU (CSR resident) ===
+Matrix: m=1048576, n=1048576, nnz=9188826, K=2048, iters=5
+Total SpMM time over 5 iters = 512.827 ms
+Average SpMM time per iter = 102.565 ms
+
+==== SUMMARY ====
+End-to-end          = 5009.72 ms
+t_csr           = 764.283 ms
+t_gpu_alloc     = 2601.81 ms
+t_cpu_alloc     = 926.432 ms
+t_h2d_ms     = 0.392224 ms
+t_spmm_ms    = 512.827 ms
+t_d2h_ms       = 58.0904 ms
+
+===================================================================
+Input matrix: ../../suitesparse_mats/rgg_n_2_20_s0/rgg_n_2_20_s0.mtx, K=2048, iters=5
+
+=== SpMM full GPU (CSR resident) ===
+Matrix: m=1048576, n=1048576, nnz=9188826, K=2048, iters=5
+Total SpMM time over 5 iters = 512.685 ms
+Average SpMM time per iter = 102.537 ms
+
+==== SUMMARY ====
+End-to-end          = 5025.7 ms
+t_csr           = 763.816 ms
+t_gpu_alloc     = 2623.14 ms
+t_cpu_alloc     = 927.538 ms
+t_h2d_ms     = 0.38864 ms
+t_spmm_ms    = 512.685 ms
+t_d2h_ms       = 58.083 ms
+
+===================================================================
+Input matrix: ../../suitesparse_mats/rgg_n_2_20_s0/rgg_n_2_20_s0.mtx, K=2048, iters=5
+
+=== SpMM full GPU (CSR resident) ===
+Matrix: m=1048576, n=1048576, nnz=9188826, K=2048, iters=5
+Total SpMM time over 5 iters = 512.893 ms
+Average SpMM time per iter = 102.579 ms
+
+==== SUMMARY ====
+End-to-end          = 5034.92 ms
+t_csr           = 764.504 ms
+t_gpu_alloc     = 2606.82 ms
+t_cpu_alloc     = 952.327 ms
+t_h2d_ms     = 0.388288 ms
+t_spmm_ms    = 512.893 ms
+t_d2h_ms       = 58.0916 ms
+
+===================================================================
+Input matrix: ../../suitesparse_mats/rgg_n_2_20_s0/rgg_n_2_20_s0.mtx, K=2048, iters=5
+
+=== SpMM full GPU (CSR resident) ===
+Matrix: m=1048576, n=1048576, nnz=9188826, K=2048, iters=5
+Total SpMM time over 5 iters = 512.623 ms
+Average SpMM time per iter = 102.525 ms
+
+==== SUMMARY ====
+End-to-end          = 5004.66 ms
+t_csr           = 764.263 ms
+t_gpu_alloc     = 2610.23 ms
+t_cpu_alloc     = 922.627 ms
+t_h2d_ms     = 0.390272 ms
+t_spmm_ms    = 512.623 ms
+t_d2h_ms       = 58.0895 ms
+
+===================================================================
+Input matrix: ../../suitesparse_mats/rgg_n_2_20_s0/rgg_n_2_20_s0.mtx, K=2048, iters=5
+
+=== SpMM full GPU (CSR resident) ===
+Matrix: m=1048576, n=1048576, nnz=9188826, K=2048, iters=5
+Total SpMM time over 5 iters = 512.771 ms
+Average SpMM time per iter = 102.554 ms
+
+==== SUMMARY ====
+End-to-end          = 5017.8 ms
+t_csr           = 763.246 ms
+t_gpu_alloc     = 2604.34 ms
+t_cpu_alloc     = 937.732 ms
+t_h2d_ms     = 0.393344 ms
+t_spmm_ms    = 512.771 ms
+t_d2h_ms       = 58.0701 ms
+
