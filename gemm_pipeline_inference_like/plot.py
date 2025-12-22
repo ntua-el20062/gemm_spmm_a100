@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 from collections import defaultdict
 
-RESULTS_FILE = "results_all_impl_compared.txt"
+RESULTS_FILE = "results.txt"
 
 # Names of implementations you use in the logs
 impl_names = ["INITIAL APPROACH", "DOUBLE BUFFERING", "FULL OVERLAP"]
