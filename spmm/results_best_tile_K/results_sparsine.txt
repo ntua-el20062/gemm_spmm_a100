@@ -1,0 +1,73 @@
+tile_k= 24889
+--- GPU Memory Usage ---
+Total GPU Memory: 39.50 GB
+Free GPU Memory:  39.06 GB
+Used GPU Memory:  0.44 GB
+------------------------
+
+Process RSS:  0.65 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=16475.4 ms
+t_cpu_alloc=10206.4 ms
+t_gpu_alloc=15.4948 ms
+t_h2d_ms=1016.76 ms
+t_d2h_ms=1340.41 ms
+t_spmm_ms=797.982 ms
+t_pure_computation_and_transfers=2229.83 ms
+Generating '/tmp/nsys-report-c28c.qdstrm'
+[1/7] [0%                          ] nsys_report_sparsine.nsys-rep[1/7] [0%                          ] nsys_report_sparsine.nsys-rep[1/7] [==19%                       ] nsys_report_sparsine.nsys-rep[1/7] [===========50%              ] nsys_report_sparsine.nsys-rep[1/7] [===================80%      ] nsys_report_sparsine.nsys-rep[1/7] [===================81%      ] nsys_report_sparsine.nsys-rep[1/7] [===================82%      ] nsys_report_sparsine.nsys-rep[1/7] [====================83%     ] nsys_report_sparsine.nsys-rep[1/7] [====================84%     ] nsys_report_sparsine.nsys-rep[1/7] [====================85%     ] nsys_report_sparsine.nsys-rep[1/7] [=====================86%    ] nsys_report_sparsine.nsys-rep[1/7] [=====================87%    ] nsys_report_sparsine.nsys-rep[1/7] [=====================88%    ] nsys_report_sparsine.nsys-rep[1/7] [=====================89%    ] nsys_report_sparsine.nsys-rep[1/7] [======================90%   ] nsys_report_sparsine.nsys-rep[1/7] [======================91%   ] nsys_report_sparsine.nsys-rep[1/7] [======================92%   ] nsys_report_sparsine.nsys-rep[1/7] [=======================93%  ] nsys_report_sparsine.nsys-rep[1/7] [=======================94%  ] nsys_report_sparsine.nsys-rep[1/7] [=======================95%  ] nsys_report_sparsine.nsys-rep[1/7] [=======================96%  ] nsys_report_sparsine.nsys-rep[1/7] [========================97% ] nsys_report_sparsine.nsys-rep[1/7] [========================100%] nsys_report_sparsine.nsys-rep[1/7] [========================100%] nsys_report_sparsine.nsys-rep
+[2/7] [0%                          ] nsys_report_sparsine.sqlite[2/7] [1%                          ] nsys_report_sparsine.sqlite[2/7] [2%                          ] nsys_report_sparsine.sqlite[2/7] [3%                          ] nsys_report_sparsine.sqlite[2/7] [4%                          ] nsys_report_sparsine.sqlite[2/7] [5%                          ] nsys_report_sparsine.sqlite[2/7] [6%                          ] nsys_report_sparsine.sqlite[2/7] [7%                          ] nsys_report_sparsine.sqlite[2/7] [8%                          ] nsys_report_sparsine.sqlite[2/7] [9%                          ] nsys_report_sparsine.sqlite[2/7] [10%                         ] nsys_report_sparsine.sqlite[2/7] [11%                         ] nsys_report_sparsine.sqlite[2/7] [12%                         ] nsys_report_sparsine.sqlite[2/7] [13%                         ] nsys_report_sparsine.sqlite[2/7] [14%                         ] nsys_report_sparsine.sqlite[2/7] [=15%                        ] nsys_report_sparsine.sqlite[2/7] [=16%                        ] nsys_report_sparsine.sqlite[2/7] [=17%                        ] nsys_report_sparsine.sqlite[2/7] [==18%                       ] nsys_report_sparsine.sqlite[2/7] [==19%                       ] nsys_report_sparsine.sqlite[2/7] [==20%                       ] nsys_report_sparsine.sqlite[2/7] [==21%                       ] nsys_report_sparsine.sqlite[2/7] [===22%                      ] nsys_report_sparsine.sqlite[2/7] [===23%                      ] nsys_report_sparsine.sqlite[2/7] [===24%                      ] nsys_report_sparsine.sqlite[2/7] [====25%                     ] nsys_report_sparsine.sqlite[2/7] [====26%                     ] nsys_report_sparsine.sqlite[2/7] [====27%                     ] nsys_report_sparsine.sqlite[2/7] [====28%                     ] nsys_report_sparsine.sqlite[2/7] [=====29%                    ] nsys_report_sparsine.sqlite[2/7] [=====30%                    ] nsys_report_sparsine.sqlite[2/7] [=====31%                    ] nsys_report_sparsine.sqlite[2/7] [=====32%                    ] nsys_report_sparsine.sqlite[2/7] [======33%                   ] nsys_report_sparsine.sqlite[2/7] [======34%                   ] nsys_report_sparsine.sqlite[2/7] [======35%                   ] nsys_report_sparsine.sqlite[2/7] [=======36%                  ] nsys_report_sparsine.sqlite[2/7] [=======37%                  ] nsys_report_sparsine.sqlite[2/7] [=======38%                  ] nsys_report_sparsine.sqlite[2/7] [=======39%                  ] nsys_report_sparsine.sqlite[2/7] [========40%                 ] nsys_report_sparsine.sqlite[2/7] [========41%                 ] nsys_report_sparsine.sqlite[2/7] [========42%                 ] nsys_report_sparsine.sqlite[2/7] [=========43%                ] nsys_report_sparsine.sqlite[2/7] [=========44%                ] nsys_report_sparsine.sqlite[2/7] [=========45%                ] nsys_report_sparsine.sqlite[2/7] [=========46%                ] nsys_report_sparsine.sqlite[2/7] [==========47%               ] nsys_report_sparsine.sqlite[2/7] [==========48%               ] nsys_report_sparsine.sqlite[2/7] [==========49%               ] nsys_report_sparsine.sqlite[2/7] [===========50%              ] nsys_report_sparsine.sqlite[2/7] [===========51%              ] nsys_report_sparsine.sqlite[2/7] [===========52%              ] nsys_report_sparsine.sqlite[2/7] [===========53%              ] nsys_report_sparsine.sqlite[2/7] [============54%             ] nsys_report_sparsine.sqlite[2/7] [============55%             ] nsys_report_sparsine.sqlite[2/7] [============56%             ] nsys_report_sparsine.sqlite[2/7] [============57%             ] nsys_report_sparsine.sqlite[2/7] [=============58%            ] nsys_report_sparsine.sqlite[2/7] [=============59%            ] nsys_report_sparsine.sqlite[2/7] [=============60%            ] nsys_report_sparsine.sqlite[2/7] [==============61%           ] nsys_report_sparsine.sqlite[2/7] [==============62%           ] nsys_report_sparsine.sqlite[2/7] [==============63%           ] nsys_report_sparsine.sqlite[2/7] [==============64%           ] nsys_report_sparsine.sqlite[2/7] [===============65%          ] nsys_report_sparsine.sqlite[2/7] [===============66%          ] nsys_report_sparsine.sqlite[2/7] [===============67%          ] nsys_report_sparsine.sqlite[2/7] [================68%         ] nsys_report_sparsine.sqlite[2/7] [================69%         ] nsys_report_sparsine.sqlite[2/7] [================70%         ] nsys_report_sparsine.sqlite[2/7] [================71%         ] nsys_report_sparsine.sqlite[2/7] [=================72%        ] nsys_report_sparsine.sqlite[2/7] [=================73%        ] nsys_report_sparsine.sqlite[2/7] [=================74%        ] nsys_report_sparsine.sqlite[2/7] [==================75%       ] nsys_report_sparsine.sqlite[2/7] [==================76%       ] nsys_report_sparsine.sqlite[2/7] [==================77%       ] nsys_report_sparsine.sqlite[2/7] [==================78%       ] nsys_report_sparsine.sqlite[2/7] [===================79%      ] nsys_report_sparsine.sqlite[2/7] [===================80%      ] nsys_report_sparsine.sqlite[2/7] [===================81%      ] nsys_report_sparsine.sqlite[2/7] [===================82%      ] nsys_report_sparsine.sqlite[2/7] [====================83%     ] nsys_report_sparsine.sqlite[2/7] [====================84%     ] nsys_report_sparsine.sqlite[2/7] [====================85%     ] nsys_report_sparsine.sqlite[2/7] [=====================86%    ] nsys_report_sparsine.sqlite[2/7] [=====================87%    ] nsys_report_sparsine.sqlite[2/7] [=====================88%    ] nsys_report_sparsine.sqlite[2/7] [=====================89%    ] nsys_report_sparsine.sqlite[2/7] [======================90%   ] nsys_report_sparsine.sqlite[2/7] [======================91%   ] nsys_report_sparsine.sqlite[2/7] [======================92%   ] nsys_report_sparsine.sqlite[2/7] [=======================93%  ] nsys_report_sparsine.sqlite[2/7] [=======================94%  ] nsys_report_sparsine.sqlite[2/7] [=======================95%  ] nsys_report_sparsine.sqlite[2/7] [=======================96%  ] nsys_report_sparsine.sqlite[2/7] [========================97% ] nsys_report_sparsine.sqlite[2/7] [========================98% ] nsys_report_sparsine.sqlite[2/7] [========================99% ] nsys_report_sparsine.sqlite[2/7] [========================100%] nsys_report_sparsine.sqlite[2/7] [========================100%] nsys_report_sparsine.sqlite
+[3/7] Executing 'nvtx_sum' stats report
+[4/7] Executing 'cuda_api_sum' stats report
+
+ Time (%)  Total Time (ns)  Num Calls    Avg (ns)      Med (ns)     Min (ns)    Max (ns)   StdDev (ns)            Name           
+ --------  ---------------  ---------  ------------  ------------  ----------  ----------  -----------  -------------------------
+     61.5      10206265611          2  5103132805.5  5103132805.5  5080771370  5125494241   31623845.4  cudaHostAlloc            
+     24.1       4003278036          2  2001639018.0  2001639018.0  1968477162  2034800874   46897946.5  cudaFreeHost             
+     10.4       1724139052          3   574713017.3   618547830.0     3518661  1102072561  550587219.2  cudaStreamSynchronize    
+      3.0        505414214          9    56157134.9        4390.0        3920   497865827  165659232.0  cudaLaunchKernel         
+      0.8        139740015          2    69870007.5    69870007.5        9740   139730275   98797337.8  cudaMemGetInfo           
+      0.1         22503101          9     2500344.6     2255856.0       15340     5120859    2483731.0  cudaFree                 
+      0.0          2725591          8      340698.9      372194.5       13660      712798     275763.6  cudaMalloc               
+      0.0          2237927          3      745975.7      755278.0      102622     1380027     638753.3  cudaMemcpy               
+      0.0           145352        409         355.4         300.0         130        5450        378.3  cuGetProcAddress_v2      
+      0.0            75301         29        2596.6        2360.0         540        8400       2130.9  cudaEventRecord          
+      0.0            55550          3       18516.7       19880.0        5400       30270      12490.9  cudaMemsetAsync          
+      0.0            53701          6        8950.2        7165.0        3861       17560       5677.3  cudaMemcpyAsync          
+      0.0            34451          3       11483.7        3030.0        2760       28661      14876.6  cudaStreamCreateWithFlags
+      0.0            22660         20        1133.0         635.0         520        4870       1193.9  cudaEventCreate          
+      0.0            19010          3        6336.7        3030.0        2620       13360       6085.8  cudaStreamDestroy        
+      0.0            16391         24         683.0         495.0         360        4700        878.4  cudaEventDestroy         
+      0.0            12111          9        1345.7         820.0         640        3721       1168.2  cudaStreamWaitEvent      
+      0.0             5420          6         903.3         480.0         420        3090       1071.7  cudaEventCreateWithFlags 
+      0.0             3860          2        1930.0        1930.0         360        3500       2220.3  cuModuleGetLoadingMode   
+      0.0             3670          1        3670.0        3670.0        3670        3670          0.0  cuInit                   
+
+[5/7] Executing 'cuda_gpu_kern_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances   Avg (ns)     Med (ns)    Min (ns)  Max (ns)   StdDev (ns)                                                  Name                                                
+ --------  ---------------  ---------  -----------  -----------  --------  ---------  -----------  ----------------------------------------------------------------------------------------------------
+     98.3        770112120          3  256704040.0  382815008.0   3384791  383912321  219381591.0  void cusparse::load_balancing_kernel<(unsigned int)256, (unsigned int)1, (unsigned long)0, int, int…
+      1.7         13244511          3    4414837.0    6409614.0     61376    6773521    3774595.9  void cusparse::matrix_scalar_multiply_kernel<cusparse::MatrixWiseMulPolicy, (bool)1, long, double, …
+      0.0            27392          3       9130.7       9184.0      8928       9280        182.0  void cusparse::binary_search_partition_kernel<(int)256, (int)256, int, int, cusparse::CsrLoadBalanc…
+
+[6/7] Executing 'cuda_gpu_mem_time_sum' stats report
+
+ Time (%)  Total Time (ns)  Count   Avg (ns)     Med (ns)    Min (ns)  Max (ns)   StdDev (ns)           Operation          
+ --------  ---------------  -----  -----------  -----------  --------  ---------  -----------  ----------------------------
+     56.6       1340391463      3  446797154.3  624620596.0   5076610  710694257  384954475.5  [CUDA memcpy Device-to-Host]
+     42.9       1016444712      6  169407452.0    4450429.5     16416  515575580  258857816.8  [CUDA memcpy Host-to-Device]
+      0.6         13236128      3    4412042.7    6423534.0     61729    6750865    3771035.4  [CUDA memset]               
+
+[7/7] Executing 'cuda_gpu_mem_size_sum' stats report
+
+ Total (MB)  Count  Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)           Operation          
+ ----------  -----  --------  --------  --------  --------  -----------  ----------------------------
+  20018.788      6  3336.465    50.596     0.200  9955.600     5127.261  [CUDA memcpy Host-to-Device]
+  20000.000      3  6666.667  9955.600    88.800  9955.600     5696.600  [CUDA memcpy Device-to-Host]
+  20000.000      3  6666.667  9955.600    88.800  9955.600     5696.600  [CUDA memset]               
+
+Generated:
+    /home/users/amei/gemm_spmm_a100/spmm/./results_best_tile_K/nsys_reports/nsys_report_sparsine.nsys-rep
+    /home/users/amei/gemm_spmm_a100/spmm/./results_best_tile_K/nsys_reports/nsys_report_sparsine.sqlite

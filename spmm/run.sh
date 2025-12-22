@@ -2,19 +2,19 @@
 set -u -o pipefail
 
 MATS=(
-   "../../suitesparse_mats/big_matrices/rgg_n_2_20_s0/rgg_n_2_20_s0.mtx"
-   "../../suitesparse_mats/big_matrices/ecology1/ecology1.mtx"
-   "../../suitesparse_mats/big_matrices/rgg_n_2_21_s0/rgg_n_2_21_s0.mtx"
-   "../../suitesparse_mats/big_matrices/Queen_4147/Queen_4147.mtx"
+   #"../../suitesparse_mats/big_matrices/rgg_n_2_20_s0/rgg_n_2_20_s0.mtx"
+   "suitesparse/ecology1/ecology1.mtx"
+   "suitesparse/rgg_n_2_21_s0/rgg_n_2_21_s0.mtx"
+   #"../../suitesparse_mats/big_matrices/Queen_4147/Queen_4147.mtx"
    #"../../suitesparse_mats/small_matrices/Goodwin_095/Goodwin_095.mtx"
    #"../../suitesparse_mats/small_matrices/GL7d14/GL7d14.mtx"
-   #"../../suitesparse_mats/small_matrices/c-45/c-45.mtx"
+   "suitesparse/c-49/c-49.mtx"
    #"../../suitesparse_mats/small_matrices/c-49/c-49.mtx"
    #"../../suitesparse_mats/small_matrices/ch5-5-b3/ch5-5-b3.mtx"
    #"../../suitesparse_mats/small_matrices/ex19/ex19.mtx"
-   #"../../suitesparse_mats/small_matrices/majorbasis/majorbasis.mtx"
-   #"../../suitesparse_mats/small_matrices/scircuit/scircuit.mtx"
-   #"../../suitesparse_mats/small_matrices/sparsine/sparsine.mtx"
+   "suitesparse/majorbasis/majorbasis.mtx"
+   "suitesparse/scircuit/scircuit.mtx"
+   "suitesparse/sparsine/sparsine.mtx"
    #"../../suitesparse_mats/small_matrices/torsion1/torsion1.mtx"
    #"../../suitesparse_mats/small_matrices/usps_norm_5NN/usps_norm_5NN.mtx"
 )
@@ -263,5 +263,5 @@ run_and_log() {
 
 for mat in "${MATS[@]}"; do
   mat_name=$(basename "$mat" .mtx)
-  nsys profile -o ./results_best_tile_K/nsys_reports/nsys_report_${mat_name}.txt -f true -t cuda,cublas --cuda-memory-usage=true --stats=true -w true ./spmm_dense_tile_overlap $mat
+  nsys profile -o ./results_best_tile_K/nsys_reports/nsys_report_${mat_name} -f true -t cuda,cublas --cuda-memory-usage=true --stats=true -w true ./spmm_dense_tile_overlap $mat > ./results_best_tile_K/results_${mat_name}.txt
 done
