@@ -1,20 +1,19 @@
 import re
 import numpy as np
 import matplotlib.pyplot as plt
-LOG_FILE = "results_all_impl_compared.txt"   # change if your filename is different
+LOG_FILE = "results.txt"
 
 with open(LOG_FILE, "r") as f:
     lines = f.readlines()
 
 data = {}
 
-current_impl = None    # "initial", "double", "full"
-current_cfg = None     # (N, batch, steps)
+current_impl = None
+current_cfg = None
 
 for raw in lines:
     line = raw.strip()
 
-    # detect which implementation block we're in
     if "INITIAL APPROACH" in line:
         current_impl = "initial"
         current_cfg = None
@@ -28,7 +27,6 @@ for raw in lines:
         current_cfg = None
         continue
 
-    # detect configuration line
     if line.startswith("Using N ="):
         m = re.search(
             r"Using N\s*=\s*(\d+),\s*(?:batch_size|buff_size)\s*=\s*(\d+)\s*\(num_steps\s*=\s*(\d+)\)",
@@ -42,7 +40,6 @@ for raw in lines:
             data.setdefault(current_cfg, {})
         continue
 
-    # mark failures (CUDA error or killed process)
     if "CUDA error" in line or "Killed" in line:
         if current_impl is not None and current_cfg is not None:
             data.setdefault(current_cfg, {})
@@ -51,16 +48,15 @@ for raw in lines:
         current_cfg = None
         continue
 
-    # pick up t_end_2_end
     if "t_end_2_end" in line and current_impl is not None and current_cfg is not None:
         m = re.search(r"t_end_2_end\s*=\s*([0-9.]+)", line)
         if m:
             t = float(m.group(1))
             data[current_cfg][current_impl] = t
 
-valid_Ns = {20000, 25000, 30000}  
-valid_size = {5, 10}
-valid_steps = {60, 80, 100, 150}
+valid_Ns = {5000, 10000, 20000, 25000, 30000}  
+valid_size = {5, 10, 20}
+valid_steps = {20, 40, 60, 80, 100, 150}
 valid_cfgs = []
 
 for cfg, impls in data.items():
@@ -111,5 +107,5 @@ plt.legend()
 plt.tight_layout()
 plt.grid(axis="y", alpha=0.3)
 
-plt.savefig("end2end.png", dpi=300, bbox_inches="tight")
+plt.savefig("end2end_all_impl_compared.png", dpi=300, bbox_inches="tight")
 
