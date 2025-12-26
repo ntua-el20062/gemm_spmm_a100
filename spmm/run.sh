@@ -6,17 +6,17 @@ MATS=(
    "suitesparse/ecology1/ecology1.mtx"
    "suitesparse/rgg_n_2_21_s0/rgg_n_2_21_s0.mtx"
    #"../../suitesparse_mats/big_matrices/Queen_4147/Queen_4147.mtx"
-   #"../../suitesparse_mats/small_matrices/Goodwin_095/Goodwin_095.mtx"
+   "suitesparse/Goodwin_095/Goodwin_095.mtx"
    #"../../suitesparse_mats/small_matrices/GL7d14/GL7d14.mtx"
+   "suitesparse/c-45/c-45.mtx"
    "suitesparse/c-49/c-49.mtx"
-   #"../../suitesparse_mats/small_matrices/c-49/c-49.mtx"
    #"../../suitesparse_mats/small_matrices/ch5-5-b3/ch5-5-b3.mtx"
-   #"../../suitesparse_mats/small_matrices/ex19/ex19.mtx"
+   "suitesparse/ex19/ex19.mtx"
    "suitesparse/majorbasis/majorbasis.mtx"
    "suitesparse/scircuit/scircuit.mtx"
    "suitesparse/sparsine/sparsine.mtx"
-   #"../../suitesparse_mats/small_matrices/torsion1/torsion1.mtx"
-   #"../../suitesparse_mats/small_matrices/usps_norm_5NN/usps_norm_5NN.mtx"
+   "suitesparse/torsion1/torsion1.mtx"
+   "suitesparse/usps_norm_5NN/usps_norm_5NN.mtx"
 )
 NRUNS=5
 
@@ -132,38 +132,60 @@ run_and_log() {
     local mean_e2e mean_cpu_alloc mean_gpu_alloc mean_h2d mean_d2h mean_spmm
 
     mean_e2e=$(
-      awk 'match($0, /End2End[^0-9]*([0-9.]+)/, a) { s += a[1]; n++ }
-           END { if (n>0) printf "%.3f", s/n; }' "$log"
-    )
+  awk -F= '/^End2End=/ {
+      v=$2; sub(/ ms.*/,"",v);
+      s+=v; n++
+    }
+    END{ if(n) printf "%.3f", s/n }' "$log"
+)
 
-    mean_cpu_alloc=$(
-      awk 'match($0, /t_cpu_alloc[^0-9]*([0-9.]+)/, a) { s += a[1]; n++ }
-           END { if (n>0) printf "%.3f", s/n; }' "$log"
-    )
+mean_cpu_alloc=$(
+  awk -F= '/^t_cpu_alloc=/ {
+      v=$2; sub(/ ms.*/,"",v);
+      s+=v; n++
+    }
+    END{ if(n) printf "%.3f", s/n }' "$log"
+)
 
-    mean_gpu_alloc=$(
-      awk 'match($0, /t_gpu_alloc[^0-9]*([0-9.]+)/, a) { s += a[1]; n++ }
-           END { if (n>0) printf "%.3f", s/n; }' "$log"
-    )
+mean_gpu_alloc=$(
+  awk -F= '/^t_gpu_alloc=/ {
+      v=$2; sub(/ ms.*/,"",v);
+      s+=v; n++
+    }
+    END{ if(n) printf "%.3f", s/n }' "$log"
+)
 
-    mean_h2d=$(
-      awk 'match($0, /t_h2d_ms[^0-9]*([0-9.]+)/, a) { s += a[1]; n++ }
-           END { if (n>0) printf "%.3f", s/n; }' "$log"
-    )
+mean_h2d=$(
+  awk -F= '/^t_h2d_ms=/ {
+      v=$2; sub(/ ms.*/,"",v);
+      s+=v; n++
+    }
+    END{ if(n) printf "%.3f", s/n }' "$log"
+)
 
-    mean_d2h=$(
-      awk 'match($0, /t_d2h_ms[^0-9]*([0-9.]+)/, a) { s += a[1]; n++ }
-           END { if (n>0) printf "%.3f", s/n; }' "$log"
-    )
+mean_d2h=$(
+  awk -F= '/^t_d2h_ms=/ {
+      v=$2; sub(/ ms.*/,"",v);
+      s+=v; n++
+    }
+    END{ if(n) printf "%.3f", s/n }' "$log"
+)
 
-    mean_spmm=$(
-      awk 'match($0, /t_spmm_ms[^0-9]*([0-9.]+)/, a) { s += a[1]; n++ }
-           END { if (n>0) printf "%.3f", s/n; }' "$log"
-    )
-    mean_compute=$(
-      awk 'match($0, /t_pure_computation[^0-9]*([0-9.]+)/, a)   { s += a[1]; n++ }
-           END { if (n>0) printf "%.3f", s/n; }'       "$log"
-    )
+mean_spmm=$(
+  awk -F= '/^t_spmm_ms=/ {
+      v=$2; sub(/ ms.*/,"",v);
+      s+=v; n++
+    }
+    END{ if(n) printf "%.3f", s/n }' "$log"
+)
+
+mean_compute=$(
+  awk -F= '/^t_pure_computation_and_transfers=/ {
+      v=$2; sub(/ ms.*/,"",v);
+      s+=v; n++
+    }
+    END{ if(n) printf "%.3f", s/n }' "$log"
+)
 
 
     echo ""
@@ -242,26 +264,26 @@ run_and_log() {
 }
 
 # ========= Run everything for each matrix ========= #
-#for mat in "${MATS[@]}"; do
-#  mat_name=$(basename "$mat" .mtx)
-#  results_file="results_best_tile_K/results_${mat_name}.txt"
+for mat in "${MATS[@]}"; do
+  mat_name=$(basename "$mat" .mtx)
+  results_file="results_best_tile_K/no_nsys/results_${mat_name}.txt"
 
-#  {
-#    echo "============================================================="
-#    echo "               MATRIX: ${mat_name}"
-#    echo "============================================================="
+  {
+    echo "============================================================="
+    echo "               MATRIX: ${mat_name}"
+    echo "============================================================="
 
-    #for cfg in "${STREAM_CFGS[@]}"; do
-    #  run_and_log "$EXE_STREAM" "$mat" "$cfg" "overlap"
-    #done
+    for cfg in "${STREAM_CFGS[@]}"; do
+      run_and_log "$EXE_STREAM" "$mat" "$cfg" "overlap"
+    done
 
     #for cfg in "${CSR_CFGS[@]}"; do
     #  run_and_log "$EXE_CSR" "$mat" "$cfg" "csr"
-    #done
-#  } > "$results_file"
-#done
-
-for mat in "${MATS[@]}"; do
-  mat_name=$(basename "$mat" .mtx)
-  nsys profile -o ./results_best_tile_K/nsys_reports/nsys_report_${mat_name} -f true -t cuda,cublas --cuda-memory-usage=true --stats=true -w true ./spmm_dense_tile_overlap $mat > ./results_best_tile_K/results_${mat_name}.txt
+    #adone
+  } > "$results_file"
 done
+
+#for mat in "${MATS[@]}"; do
+#  mat_name=$(basename "$mat" .mtx)
+#  ./spmm_dense_tile_overlap $mat > ./results_best_tile_K/no_nsys/${mat_name}.txt
+#done

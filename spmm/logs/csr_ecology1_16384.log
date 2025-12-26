@@ -1,0 +1,5 @@
+===================================================================
+Input matrix: suitesparse/ecology1/ecology1.mtx, K=16384, iters=5
+
+=== SpMM full GPU (CSR resident) ===
+Matrix: m=1000000, n=1000000, nnz=4996000, K=16384, iters=5

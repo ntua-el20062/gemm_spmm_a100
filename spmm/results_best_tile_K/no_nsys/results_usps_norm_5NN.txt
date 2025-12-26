@@ -1,0 +1,113 @@
+=============================================================
+               MATRIX: usps_norm_5NN
+=============================================================
+------------------------------------------------------
+Running overlap on matrix: usps_norm_5NN
+Config: []   NRUNS=5
+Log: logs/overlap_usps_norm_5NN_.log
+  Run 1 / 5...
+tile_k= 11000
+--- GPU Memory Usage ---
+Total GPU Memory: 39.50 GB
+Free GPU Memory:  39.09 GB
+Used GPU Memory:  0.41 GB
+------------------------
+
+Process RSS:  0.11 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=874.775 ms
+t_cpu_alloc=557.532 ms
+t_gpu_alloc=6.54197 ms
+t_h2d_ms=37.5362 ms
+t_d2h_ms=48.4343 ms
+t_spmm_ms=15.1214 ms
+t_pure_computation_and_transfers=100.699 ms
+==========================================================
+  Run 2 / 5...
+tile_k= 11000
+--- GPU Memory Usage ---
+Total GPU Memory: 39.50 GB
+Free GPU Memory:  39.09 GB
+Used GPU Memory:  0.41 GB
+------------------------
+
+Process RSS:  0.11 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=871.09 ms
+t_cpu_alloc=555.285 ms
+t_gpu_alloc=6.47879 ms
+t_h2d_ms=37.6305 ms
+t_d2h_ms=48.4349 ms
+t_spmm_ms=14.3514 ms
+t_pure_computation_and_transfers=100.022 ms
+==========================================================
+  Run 3 / 5...
+tile_k= 11000
+--- GPU Memory Usage ---
+Total GPU Memory: 39.50 GB
+Free GPU Memory:  39.09 GB
+Used GPU Memory:  0.41 GB
+------------------------
+
+Process RSS:  0.11 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=864.708 ms
+t_cpu_alloc=553.65 ms
+t_gpu_alloc=6.4652 ms
+t_h2d_ms=38.6964 ms
+t_d2h_ms=42.6178 ms
+t_spmm_ms=14.678 ms
+t_pure_computation_and_transfers=95.607 ms
+==========================================================
+  Run 4 / 5...
+tile_k= 11000
+--- GPU Memory Usage ---
+Total GPU Memory: 39.50 GB
+Free GPU Memory:  39.09 GB
+Used GPU Memory:  0.41 GB
+------------------------
+
+Process RSS:  0.11 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=867.321 ms
+t_cpu_alloc=556.626 ms
+t_gpu_alloc=6.40106 ms
+t_h2d_ms=38.7791 ms
+t_d2h_ms=42.6747 ms
+t_spmm_ms=14.3852 ms
+t_pure_computation_and_transfers=95.448 ms
+==========================================================
+  Run 5 / 5...
+tile_k= 11000
+--- GPU Memory Usage ---
+Total GPU Memory: 39.50 GB
+Free GPU Memory:  39.09 GB
+Used GPU Memory:  0.41 GB
+------------------------
+
+Process RSS:  0.11 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=891.365 ms
+t_cpu_alloc=558.312 ms
+t_gpu_alloc=6.39701 ms
+t_h2d_ms=37.7073 ms
+t_d2h_ms=63.1934 ms
+t_spmm_ms=14.507 ms
+t_pure_computation_and_transfers=115.013 ms
+==========================================================
+Computing averages...
+
+=== Averages for overlap on usps_norm_5NN, cfg=[] over 5 runs ===
+  End2End      = 873.852 ms
+  t_cpu_alloc  = 556.281 ms
+  t_gpu_alloc  = 6.457 ms
+  t_h2d_ms     = 38.070 ms
+  t_d2h_ms     = 49.071 ms
+  t_spmm_ms    = 14.609 ms
+  t_pure_computation    = 101.358 ms
+

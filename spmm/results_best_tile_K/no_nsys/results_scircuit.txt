@@ -1,0 +1,20 @@
+=============================================================
+               MATRIX: scircuit
+=============================================================
+------------------------------------------------------
+Running overlap on matrix: scircuit
+Config: []   NRUNS=5
+Log: logs/overlap_scircuit_.log
+  Run 1 / 5...
+tile_k= 7283
+--- GPU Memory Usage ---
+Total GPU Memory: 39.50 GB
+Free GPU Memory:  39.09 GB
+Used GPU Memory:  0.41 GB
+------------------------
+
+Process RSS:  0.12 GB
+  Run 1 failed with status 1 (likely OOM or similar).
+  Skipping remaining runs for this config.
+Skipping average computation for overlap on scircuit, cfg=[] due to failure.
+

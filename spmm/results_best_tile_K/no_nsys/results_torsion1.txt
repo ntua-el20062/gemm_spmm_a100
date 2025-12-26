@@ -1,0 +1,113 @@
+=============================================================
+               MATRIX: torsion1
+=============================================================
+------------------------------------------------------
+Running overlap on matrix: torsion1
+Config: []   NRUNS=5
+Log: logs/overlap_torsion1_.log
+  Run 1 / 5...
+tile_k= 31145
+--- GPU Memory Usage ---
+Total GPU Memory: 39.50 GB
+Free GPU Memory:  39.09 GB
+Used GPU Memory:  0.41 GB
+------------------------
+
+Process RSS:  0.11 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=11042.2 ms
+t_cpu_alloc=7324.63 ms
+t_gpu_alloc=10.581 ms
+t_h2d_ms=628.982 ms
+t_d2h_ms=608.999 ms
+t_spmm_ms=64.1413 ms
+t_pure_computation_and_transfers=1150.06 ms
+==========================================================
+  Run 2 / 5...
+tile_k= 31145
+--- GPU Memory Usage ---
+Total GPU Memory: 39.50 GB
+Free GPU Memory:  39.09 GB
+Used GPU Memory:  0.41 GB
+------------------------
+
+Process RSS:  0.11 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=11011 ms
+t_cpu_alloc=7284.34 ms
+t_gpu_alloc=10.5312 ms
+t_h2d_ms=635.962 ms
+t_d2h_ms=674.452 ms
+t_spmm_ms=63.7972 ms
+t_pure_computation_and_transfers=1180.36 ms
+==========================================================
+  Run 3 / 5...
+tile_k= 31145
+--- GPU Memory Usage ---
+Total GPU Memory: 39.50 GB
+Free GPU Memory:  39.09 GB
+Used GPU Memory:  0.41 GB
+------------------------
+
+Process RSS:  0.11 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=10995.8 ms
+t_cpu_alloc=7283.51 ms
+t_gpu_alloc=10.463 ms
+t_h2d_ms=642.49 ms
+t_d2h_ms=601.332 ms
+t_spmm_ms=63.8925 ms
+t_pure_computation_and_transfers=1146.05 ms
+==========================================================
+  Run 4 / 5...
+tile_k= 31145
+--- GPU Memory Usage ---
+Total GPU Memory: 39.50 GB
+Free GPU Memory:  39.09 GB
+Used GPU Memory:  0.41 GB
+------------------------
+
+Process RSS:  0.11 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=10966 ms
+t_cpu_alloc=7306.45 ms
+t_gpu_alloc=10.561 ms
+t_h2d_ms=573.734 ms
+t_d2h_ms=594.305 ms
+t_spmm_ms=64.256 ms
+t_pure_computation_and_transfers=1080.25 ms
+==========================================================
+  Run 5 / 5...
+tile_k= 31145
+--- GPU Memory Usage ---
+Total GPU Memory: 39.50 GB
+Free GPU Memory:  39.09 GB
+Used GPU Memory:  0.41 GB
+------------------------
+
+Process RSS:  0.11 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=11037.4 ms
+t_cpu_alloc=7316.91 ms
+t_gpu_alloc=10.6649 ms
+t_h2d_ms=632.304 ms
+t_d2h_ms=599.875 ms
+t_spmm_ms=63.9109 ms
+t_pure_computation_and_transfers=1143.83 ms
+==========================================================
+Computing averages...
+
+=== Averages for overlap on torsion1, cfg=[] over 5 runs ===
+  End2End      = 11010.480 ms
+  t_cpu_alloc  = 7303.168 ms
+  t_gpu_alloc  = 10.560 ms
+  t_h2d_ms     = 622.694 ms
+  t_d2h_ms     = 615.793 ms
+  t_spmm_ms    = 64.000 ms
+  t_pure_computation    = 1140.110 ms
+

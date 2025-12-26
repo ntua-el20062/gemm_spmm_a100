@@ -1,0 +1,113 @@
+=============================================================
+               MATRIX: c-45
+=============================================================
+------------------------------------------------------
+Running overlap on matrix: c-45
+Config: []   NRUNS=5
+Log: logs/overlap_c-45_.log
+  Run 1 / 5...
+tile_k= 13206
+--- GPU Memory Usage ---
+Total GPU Memory: 39.50 GB
+Free GPU Memory:  39.09 GB
+Used GPU Memory:  0.41 GB
+------------------------
+
+Process RSS:  0.11 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=1268.65 ms
+t_cpu_alloc=793.34 ms
+t_gpu_alloc=6.6812 ms
+t_h2d_ms=58.2088 ms
+t_d2h_ms=91.5249 ms
+t_spmm_ms=19.4888 ms
+t_pure_computation_and_transfers=168.555 ms
+==========================================================
+  Run 2 / 5...
+tile_k= 13206
+--- GPU Memory Usage ---
+Total GPU Memory: 39.50 GB
+Free GPU Memory:  39.09 GB
+Used GPU Memory:  0.41 GB
+------------------------
+
+Process RSS:  0.11 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=1266 ms
+t_cpu_alloc=789.3 ms
+t_gpu_alloc=6.9468 ms
+t_h2d_ms=56.6733 ms
+t_d2h_ms=91.5517 ms
+t_spmm_ms=20.2179 ms
+t_pure_computation_and_transfers=167.786 ms
+==========================================================
+  Run 3 / 5...
+tile_k= 13206
+--- GPU Memory Usage ---
+Total GPU Memory: 39.50 GB
+Free GPU Memory:  39.09 GB
+Used GPU Memory:  0.41 GB
+------------------------
+
+Process RSS:  0.11 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=1266.56 ms
+t_cpu_alloc=814.401 ms
+t_gpu_alloc=6.83999 ms
+t_h2d_ms=54.5753 ms
+t_d2h_ms=62.1159 ms
+t_spmm_ms=19.7837 ms
+t_pure_computation_and_transfers=135.801 ms
+==========================================================
+  Run 4 / 5...
+tile_k= 13206
+--- GPU Memory Usage ---
+Total GPU Memory: 39.50 GB
+Free GPU Memory:  39.09 GB
+Used GPU Memory:  0.41 GB
+------------------------
+
+Process RSS:  0.11 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=1266.31 ms
+t_cpu_alloc=791.943 ms
+t_gpu_alloc=6.83999 ms
+t_h2d_ms=56.751 ms
+t_d2h_ms=91.5023 ms
+t_spmm_ms=20.0929 ms
+t_pure_computation_and_transfers=167.688 ms
+==========================================================
+  Run 5 / 5...
+tile_k= 13206
+--- GPU Memory Usage ---
+Total GPU Memory: 39.50 GB
+Free GPU Memory:  39.09 GB
+Used GPU Memory:  0.41 GB
+------------------------
+
+Process RSS:  0.11 GB
+
+SPMM OVERLAP STREAM (FP64, CSR resident, K-tiled)
+End2End=1265.02 ms
+t_cpu_alloc=813.629 ms
+t_gpu_alloc=7.02715 ms
+t_h2d_ms=54.5994 ms
+t_d2h_ms=62.0111 ms
+t_spmm_ms=20.479 ms
+t_pure_computation_and_transfers=136.407 ms
+==========================================================
+Computing averages...
+
+=== Averages for overlap on c-45, cfg=[] over 5 runs ===
+  End2End      = 1266.508 ms
+  t_cpu_alloc  = 800.523 ms
+  t_gpu_alloc  = 6.867 ms
+  t_h2d_ms     = 56.162 ms
+  t_d2h_ms     = 79.741 ms
+  t_spmm_ms    = 20.012 ms
+  t_pure_computation    = 155.247 ms
+
