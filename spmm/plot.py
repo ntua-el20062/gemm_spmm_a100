@@ -7,6 +7,7 @@ from collections import defaultdict
 import numpy as np
 import matplotlib.pyplot as plt
 
+# ---------------- Regex ----------------
 matrix_re = re.compile(r"^\s*MATRIX:\s*(\S+)")
 tilek_re = re.compile(r"^\s*tile_k\s*=\s*(\d+)\s*$")
 
@@ -14,46 +15,41 @@ avg_header_re = re.compile(
     r"^=== Averages for (overlap|csr) on (\S+), cfg=\[(.*?)\] over \d+ runs ==="
 )
 
+timing_re = re.compile(r"^\s*([A-Za-z0-9_]+)\s*=?\s*([\d\.]+)\s*ms\s*$")
 
-timing_re_any = re.compile(r"^\s*([A-Za-z0-9_]+)\s*=?\s*([\d\.]+)\s*ms\s*$")
-
-
+# data[matrix][impl] = record
 data = defaultdict(dict)
 
 
-def parse_file(path: str):
+def parse_file(path):
     with open(path, "r") as f:
         lines = f.readlines()
 
     matrix = None
     tile_k = None
 
- 
+    # Get matrix name + tile_k
     for line in lines:
         if matrix is None:
             m = matrix_re.search(line)
             if m:
                 matrix = m.group(1)
-
         if tile_k is None:
             m = tilek_re.search(line)
             if m:
                 tile_k = int(m.group(1))
-
-        if matrix is not None and tile_k is not None:
+        if matrix and tile_k:
             break
 
     i = 0
     while i < len(lines):
-        line = lines[i].strip()
-        mh = avg_header_re.match(line)
+        mh = avg_header_re.match(lines[i].strip())
         if not mh:
             i += 1
             continue
 
-        impl = mh.group(1)      # overlap / csr
-        matrix2 = mh.group(2)   # matrix name in header
-        cfg = mh.group(3).strip()
+        impl = mh.group(1)   # overlap / csr
+        matrix2 = mh.group(2)
 
         if matrix is None:
             matrix = matrix2
@@ -61,42 +57,33 @@ def parse_file(path: str):
         record = {
             "matrix": matrix,
             "impl": impl,
-            "cfg": cfg,
-            "tile_k": tile_k,  # may be None if missing
+            "tile_k": tile_k,
             "End2End": np.nan,
             "t_cpu_alloc": 0.0,
             "t_gpu_alloc": 0.0,
             "t_h2d_ms": 0.0,
             "t_spmm_ms": 0.0,
             "t_d2h_ms": 0.0,
-            "t_pure_computation_and_transfers": 0.0,
         }
 
         i += 1
         while i < len(lines):
-            l = lines[i].strip()
-            if l == "" or l.startswith("==="):
+            line = lines[i].strip()
+            if line == "" or line.startswith("==="):
                 break
 
-            mt = timing_re_any.match(l)
+            mt = timing_re.match(line)
             if mt:
-                key = mt.group(1)
-                val = float(mt.group(2))
-
-  
-                if key == "t_pure_computation":
-                    key = "t_pure_computation_and_transfers"
-
+                key, val = mt.group(1), float(mt.group(2))
                 if key == "End2End":
                     record["End2End"] = val
                 elif key in record:
                     record[key] = val
-
             i += 1
 
-   
+        # keep best (min End2End)
         prev = data[matrix].get(impl)
-        if prev is None or (record["End2End"] < prev["End2End"]):
+        if prev is None or record["End2End"] < prev["End2End"]:
             data[matrix][impl] = record
 
         i += 1
@@ -106,141 +93,102 @@ def plot_all(outdir="plots_all"):
     os.makedirs(outdir, exist_ok=True)
 
     matrices = sorted(data.keys())
-    if not matrices:
-        print("No matrices parsed. Check your input glob.")
-        return
-
-    all_impls = sorted({impl for m in matrices for impl in data[m].keys()})
-    friendly_impl = {"csr": "Full GPU (CSR)", "overlap": "Overlap stream"}
+    impls = sorted({impl for m in matrices for impl in data[m]})
 
     x = np.arange(len(matrices))
-    n_impl = len(all_impls)
-    total_width = 0.85
-    width = total_width / max(n_impl, 1)
+    width = 0.8 / max(len(impls), 1)
 
-    
     labels = []
     tileks = []
     for m in matrices:
-        tk = None
-        for impl in all_impls:
-            r = data[m].get(impl)
-            if r and r.get("tile_k") is not None:
-                tk = r["tile_k"]
-                break
-        tileks.append(np.nan if tk is None else tk)
-        labels.append(f"{m}\nK={tk}" if tk is not None else m)
+        r = next(iter(data[m].values()))
+        labels.append(f"{m}\nK={r['tile_k']}")
+        tileks.append(r["tile_k"])
 
+    # ---------- tile_k plot ----------
     plt.figure(figsize=(max(10, len(matrices) * 0.35), 4))
     plt.bar(x, tileks)
-    plt.xticks(x, [m for m in matrices], rotation=90)
-    plt.ylabel("tile_k (K)")
+    plt.xticks(x, matrices, rotation=90)
+    plt.ylabel("tile_k")
     plt.title("tile_k per matrix")
     plt.grid(axis="y", alpha=0.3)
     plt.tight_layout()
-    plt.savefig(os.path.join(outdir, "all_matrices_tile_k.png"), dpi=150)
+    plt.savefig(f"{outdir}/tile_k.png", dpi=150)
     plt.close()
 
+    # ---------- End2End ----------
     plt.figure(figsize=(max(10, len(matrices) * 0.35), 5))
-    for idx, impl in enumerate(all_impls):
-        y = [np.nan if data[m].get(impl) is None else data[m][impl]["End2End"] for m in matrices]
-        offset = (idx - (n_impl - 1) / 2) * width
-        plt.bar(x + offset, y, width=width, label=friendly_impl.get(impl, impl))
+    for i, impl in enumerate(impls):
+        y = [data[m][impl]["End2End"] if impl in data[m] else np.nan for m in matrices]
+        plt.bar(x + (i - 0.5) * width, y, width, label=impl)
 
     plt.xticks(x, labels, rotation=90)
-    plt.ylabel("Average End-to-end time (ms)")
-    plt.title("All matrices: End2End averages")
+    plt.ylabel("End2End (ms)")
+    plt.title("End-to-end time")
     plt.grid(axis="y", alpha=0.3)
     plt.legend()
     plt.tight_layout()
-    plt.savefig(os.path.join(outdir, "all_matrices_end2end.png"), dpi=150)
+    plt.savefig(f"{outdir}/end2end.png", dpi=150)
     plt.close()
 
+    # ---------- STACKED TIMERS (NO PURE COMPUTE) ----------
     components = [
         "t_cpu_alloc",
         "t_gpu_alloc",
-        "t_pure_computation_and_transfers",
-        "t_other",
+        "t_h2d_ms",
+        "t_spmm_ms",
+        "t_d2h_ms",
     ]
-    component_colors = {
+
+    colors = {
         "t_cpu_alloc": "tab:blue",
         "t_gpu_alloc": "tab:orange",
-        "t_pure_computation_and_transfers": "tab:green",
-        "t_other": "tab:gray",
+        "t_h2d_ms": "tab:red",
+        "t_spmm_ms": "tab:purple",
+        "t_d2h_ms": "tab:brown",
     }
 
     plt.figure(figsize=(max(10, len(matrices) * 0.35), 6))
 
-    for impl_idx, impl in enumerate(all_impls):
-        offset = (impl_idx - (n_impl - 1) / 2) * width
+    for i, impl in enumerate(impls):
         bottom = np.zeros(len(matrices))
-
-        end2end = np.array([
-            np.nan if data[m].get(impl) is None else float(data[m][impl].get("End2End", np.nan))
-            for m in matrices
-        ])
-        cpu = np.array([
-            0.0 if data[m].get(impl) is None else float(data[m][impl].get("t_cpu_alloc", 0.0))
-            for m in matrices
-        ])
-        gpu = np.array([
-            0.0 if data[m].get(impl) is None else float(data[m][impl].get("t_gpu_alloc", 0.0))
-            for m in matrices
-        ])
-        pure = np.array([
-            0.0 if data[m].get(impl) is None else float(
-                data[m][impl].get("t_pure_computation_and_transfers", 0.0)
-            )
-            for m in matrices
-        ])
-
-        other = end2end - (cpu + gpu + pure)
-        other = np.where(np.isnan(other), 0.0, other)
-        other = np.maximum(other, 0.0)
-
-        stacks = {
-            "t_cpu_alloc": cpu,
-            "t_gpu_alloc": gpu,
-            "t_pure_computation_and_transfers": pure,
-            "t_other": other,
-        }
+        offset = (i - 0.5) * width
 
         for comp in components:
-            vals = stacks[comp]
-            label = comp if impl_idx == 0 else None
+            vals = [
+                data[m][impl][comp] if impl in data[m] else 0.0
+                for m in matrices
+            ]
             plt.bar(
                 x + offset,
                 vals,
-                width=width,
+                width,
                 bottom=bottom,
-                label=label,
-                color=component_colors[comp],
+                color=colors[comp],
+                label=comp if i == 0 else None,
             )
-            bottom += vals
+            bottom += np.array(vals)
 
     plt.xticks(x, labels, rotation=90)
-    plt.ylabel("Average time (ms)")
-    plt.title("All matrices: End2End breakdown (cpu + gpu + pure + other)")
+    plt.ylabel("Time (ms)")
+    plt.title("Stacked timers (cpu, gpu, h2d, spmm, d2h)")
     plt.grid(axis="y", alpha=0.3)
-    plt.legend(title="Components")
+    plt.legend(title="Timers")
     plt.tight_layout()
-    plt.savefig(os.path.join(outdir, "all_matrices_stacked.png"), dpi=150)
+    plt.savefig(f"{outdir}/stacked_timers.png", dpi=150)
     plt.close()
 
-    print("Wrote plots to:", outdir)
-    print(" - all_matrices_tile_k.png")
-    print(" - all_matrices_end2end.png")
-    print(" - all_matrices_stacked.png")
+    print("Plots written to:", outdir)
 
 
 def main():
-    files = sorted(glob.glob("results_best_tile_K/no_nsys/*.txt"))
+    files = glob.glob("results_best_tile_K/no_nsys/*.txt")
     if not files:
-        print("No .txt files found under results_best_tile_k/no_nsys/")
+        print("No input files found.")
         return
 
-    for p in files:
-        parse_file(p)
+    for f in files:
+        parse_file(f)
 
     plot_all()
 
