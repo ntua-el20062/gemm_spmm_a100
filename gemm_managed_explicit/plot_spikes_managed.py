@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mticker   # <-- ADD
 
-log_path = "results_%_managed.txt"
+log_path = "results_%_explicit_C_10k.txt"
 out_dir = "plots"
 spikes = [0, 250, 500, 750, 1000]
 
@@ -81,7 +81,7 @@ for (m, n, k), runs_same_size in sorted(by_size.items()):
 
     ax.set_xlabel("Iteration (only spikes labeled)")
     ax.set_ylabel("t_iter (ms)")
-    ax.set_title(f"GEMM iteration time (Managed) | m={m}, n={n}, k={k}")
+    ax.set_title(f"GEMM iteration time (EXplicit) | m={m}, n={n}, k={k}")
     ax.grid(alpha=0.3)
     ax.legend()
 
@@ -101,7 +101,7 @@ for (m, n, k), runs_same_size in sorted(by_size.items()):
         # hide minor labels (optional)
         ax.yaxis.set_minor_formatter(mticker.NullFormatter())
 
-    out_png = os.path.join(out_dir, f"iters_managed_m{m}_n{n}_k{k}.png")
+    out_png = os.path.join(out_dir, f"iters_explicit_C.png")
     fig.tight_layout()
     fig.savefig(out_png, dpi=150)
     plt.close(fig)
