@@ -124,7 +124,7 @@ int main(int argc, char *argv[]) {
     double t_end2end = wtime();
 
     MemLogger memlog;
-    memlog.open("memlog_managed_C.csv", t_end2end);
+    memlog.open("memlog_managed_C_mem_advise.csv", t_end2end);
     memlog.sample(wtime()); 
 
     data_type alpha = 1.0;

@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/cublas_gemm_example_managed_C_mem_advise.dir/cublas_gemm_example_managed_C_mem_advise.cu.o"
-  "CMakeFiles/cublas_gemm_example_managed_C_mem_advise.dir/cublas_gemm_example_managed_C_mem_advise.cu.o.d"
   "cublas_gemm_example_managed_C_mem_advise"
   "cublas_gemm_example_managed_C_mem_advise.pdb"
 )

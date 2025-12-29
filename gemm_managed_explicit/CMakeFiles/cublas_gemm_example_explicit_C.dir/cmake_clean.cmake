@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/cublas_gemm_example_explicit_C.dir/cublas_gemm_example_explicit_C.cu.o"
-  "CMakeFiles/cublas_gemm_example_explicit_C.dir/cublas_gemm_example_explicit_C.cu.o.d"
   "cublas_gemm_example_explicit_C"
   "cublas_gemm_example_explicit_C.pdb"
 )

@@ -123,7 +123,7 @@ int main(int argc, char *argv[]) {
     double t_end2end = wtime();
 
     MemLogger memlog;
-    memlog.open("memlog_explicit_A.csv", t_end2end);
+    memlog.open("memlog_explicit_C.csv", t_end2end);
     memlog.sample(wtime());
 
     data_type alpha = 1.0;
@@ -241,7 +241,7 @@ int main(int argc, char *argv[]) {
             volatile double sink = 0.0;
             for (size_t i = 0; i < read_elems; ++i) {
                 //sink += h_A[dist(rng) % read_elems];
-                h_A[dist(rng) % read_elems] += 0.1;
+                h_C[dist(rng) % read_elems] += 0.1;
 		if (i % 100 == 0) memlog.sample(wtime());
             }
             (void)sink;
