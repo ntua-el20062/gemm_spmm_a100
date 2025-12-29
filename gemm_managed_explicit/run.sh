@@ -22,7 +22,7 @@ nsys profile --trace=cuda,osrt --cuda-memory-usage=true --cuda-um-gpu-page-fault
 python3 plot_mem_managed_C_mem_advise.py;
 
 nsys profile --trace=cuda,osrt --cuda-memory-usage=true --cuda-um-gpu-page-faults=true --cuda-um-cpu-page-faults=true -o um_profile_managed_A_mem_advise_10k ./cublas_gemm_example_managed_A_mem_advise 10000 10000 10000 25 > results_%_managed_A_mem_advise_10k.txt;
-python3 plot_mem_managed_C.py;
+python3 plot_mem_managed_A_mem_advise.py;
 
 #nsys profile --trace=cuda,osrt --cuda-memory-usage=true --cuda-um-gpu-page-faults=true --cuda-um-cpu-page-faults=true -o um_profile_managed_A_mem_advise_20k ./cublas_gemm_example_managed_A_mem_advise 20000 20000 20000 25 > results_%_managed_A_mem_advise_20k.txt;
 #python3 plot_mem_managed_C.py;
