@@ -89,7 +89,7 @@ int main(int argc, char *argv[]) {
     int m  = 2;
     int n  = 2;
     int k  = 2;
-    int iters = 1250;
+    int iters = 500;
     int perc = 25;
 
     if (argc == 5 || argc == 6) {
@@ -146,8 +146,11 @@ int main(int argc, char *argv[]) {
 
     double t_cuda_alloc = wtime();
     CUDA_CHECK(cudaMallocManaged(&d_A, bytesA));
-    cudaMemLocation location = {.type = cudaMemLocationTypeHost};
-    cudaMemAdvise(d_A, sizeA * sizeof(data_type), cudaMemAdviseSetAccessedBy, location);
+    //cudaMemLocation location = {.type = cudaMemLocationTypeHost};
+    //cudaMemAdvise(d_A, sizeA * sizeof(data_type), cudaMemAdviseSetAccessedBy, location);
+
+    int deviceId = 0;
+    cudaMemAdvise(d_A, bytesA, cudaMemAdviseSetAccessedBy, (int)-1);
     memlog.sample(wtime());
     CUDA_CHECK(cudaMallocManaged(&d_B, bytesB));
     memlog.sample(wtime());

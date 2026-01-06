@@ -1,0 +1,514 @@
+MANAGED VERSION
+Running GEMM with m=10000, n=10000, k=10000, iters=500
+Total A size (elements) = 100000000
+iters=500, spikes at 250/500/750/1000 (25/50/75/100%)
+iter: 0, t_iter: 5069.41 ms
+iter: 1, t_iter: 4768.96 ms
+iter: 2, t_iter: 4768.98 ms
+iter: 3, t_iter: 4769.06 ms
+iter: 4, t_iter: 4768.88 ms
+iter: 5, t_iter: 4769.26 ms
+iter: 6, t_iter: 4769.24 ms
+iter: 7, t_iter: 4769.29 ms
+iter: 8, t_iter: 4769.37 ms
+iter: 9, t_iter: 4769.38 ms
+iter: 10, t_iter: 4769.18 ms
+iter: 11, t_iter: 4769.45 ms
+iter: 12, t_iter: 4769.23 ms
+iter: 13, t_iter: 4769.41 ms
+iter: 14, t_iter: 4769.34 ms
+iter: 15, t_iter: 4769.39 ms
+iter: 16, t_iter: 4769.49 ms
+iter: 17, t_iter: 4769.42 ms
+iter: 18, t_iter: 4769.63 ms
+iter: 19, t_iter: 4769.24 ms
+iter: 20, t_iter: 4769.39 ms
+iter: 21, t_iter: 4769.26 ms
+iter: 22, t_iter: 4769.28 ms
+iter: 23, t_iter: 4772.46 ms
+iter: 24, t_iter: 4769.26 ms
+iter: 25, t_iter: 4769.15 ms
+iter: 26, t_iter: 4769.17 ms
+iter: 27, t_iter: 4769.52 ms
+iter: 28, t_iter: 4769.36 ms
+iter: 29, t_iter: 4769.21 ms
+iter: 30, t_iter: 4769.41 ms
+iter: 31, t_iter: 4769.21 ms
+iter: 32, t_iter: 4769.35 ms
+iter: 33, t_iter: 4769.21 ms
+iter: 34, t_iter: 4769.4 ms
+iter: 35, t_iter: 4769.24 ms
+iter: 36, t_iter: 4769.39 ms
+iter: 37, t_iter: 4769.24 ms
+iter: 38, t_iter: 4769.46 ms
+iter: 39, t_iter: 4769.11 ms
+iter: 40, t_iter: 4769.26 ms
+iter: 41, t_iter: 4773.92 ms
+iter: 42, t_iter: 4769.51 ms
+iter: 43, t_iter: 4769.22 ms
+iter: 44, t_iter: 4769.24 ms
+iter: 45, t_iter: 4769.42 ms
+iter: 46, t_iter: 4769.11 ms
+iter: 47, t_iter: 4769.24 ms
+iter: 48, t_iter: 4769.45 ms
+iter: 49, t_iter: 4769.33 ms
+iter: 50, t_iter: 4769.17 ms
+iter: 51, t_iter: 4769.13 ms
+iter: 52, t_iter: 4769.21 ms
+iter: 53, t_iter: 4769.04 ms
+iter: 54, t_iter: 4769.1 ms
+iter: 55, t_iter: 4769.07 ms
+iter: 56, t_iter: 4769.31 ms
+iter: 57, t_iter: 4769.14 ms
+iter: 58, t_iter: 4769.23 ms
+iter: 59, t_iter: 4772.01 ms
+iter: 60, t_iter: 4769.22 ms
+iter: 61, t_iter: 4769.24 ms
+iter: 62, t_iter: 4769.19 ms
+iter: 63, t_iter: 4769.2 ms
+iter: 64, t_iter: 4769.26 ms
+iter: 65, t_iter: 4769.2 ms
+iter: 66, t_iter: 4769.13 ms
+iter: 67, t_iter: 4769.52 ms
+iter: 68, t_iter: 4773.4 ms
+iter: 69, t_iter: 4769.02 ms
+iter: 70, t_iter: 4769.32 ms
+iter: 71, t_iter: 4769.24 ms
+iter: 72, t_iter: 4768.99 ms
+iter: 73, t_iter: 4769.23 ms
+iter: 74, t_iter: 4769.13 ms
+iter: 75, t_iter: 4769.12 ms
+iter: 76, t_iter: 4769.09 ms
+iter: 77, t_iter: 4769.25 ms
+iter: 78, t_iter: 4769.01 ms
+iter: 79, t_iter: 4769.15 ms
+iter: 80, t_iter: 4769.05 ms
+iter: 81, t_iter: 4769.07 ms
+iter: 82, t_iter: 4769.2 ms
+iter: 83, t_iter: 4769.06 ms
+iter: 84, t_iter: 4769.1 ms
+iter: 85, t_iter: 4769.14 ms
+iter: 86, t_iter: 4769.08 ms
+iter: 87, t_iter: 4769.19 ms
+iter: 88, t_iter: 4769.28 ms
+iter: 89, t_iter: 4769.14 ms
+iter: 90, t_iter: 4769.12 ms
+iter: 91, t_iter: 4769.51 ms
+iter: 92, t_iter: 4769.16 ms
+iter: 93, t_iter: 4769.07 ms
+iter: 94, t_iter: 4769.09 ms
+iter: 95, t_iter: 4772.54 ms
+iter: 96, t_iter: 4769.26 ms
+iter: 97, t_iter: 4769.6 ms
+iter: 98, t_iter: 4769.08 ms
+iter: 99, t_iter: 4769.2 ms
+iter: 100, t_iter: 4769.57 ms
+iter: 101, t_iter: 4768.54 ms
+iter: 102, t_iter: 4769.36 ms
+iter: 103, t_iter: 4769.04 ms
+iter: 104, t_iter: 4769.27 ms
+iter: 105, t_iter: 4769.23 ms
+iter: 106, t_iter: 4769.06 ms
+iter: 107, t_iter: 4769.25 ms
+iter: 108, t_iter: 4769.26 ms
+iter: 109, t_iter: 4769.23 ms
+iter: 110, t_iter: 4769.63 ms
+iter: 111, t_iter: 4768.58 ms
+iter: 112, t_iter: 4769.29 ms
+iter: 113, t_iter: 4769.52 ms
+iter: 114, t_iter: 4769.15 ms
+iter: 115, t_iter: 4769.15 ms
+iter: 116, t_iter: 4769.41 ms
+iter: 117, t_iter: 4769.32 ms
+iter: 118, t_iter: 4769.27 ms
+iter: 119, t_iter: 4769.16 ms
+iter: 120, t_iter: 4769.29 ms
+iter: 121, t_iter: 4769.2 ms
+iter: 122, t_iter: 4769.1 ms
+iter: 123, t_iter: 4769.31 ms
+iter: 124, t_iter: 4769.25 ms
+iter: 125, t_iter: 4769.37 ms
+iter: 126, t_iter: 4769.32 ms
+iter: 127, t_iter: 4769.3 ms
+iter: 128, t_iter: 4769.14 ms
+iter: 129, t_iter: 4769.12 ms
+iter: 130, t_iter: 4769.37 ms
+iter: 131, t_iter: 4769.25 ms
+iter: 132, t_iter: 4768.99 ms
+iter: 133, t_iter: 4769.05 ms
+iter: 134, t_iter: 4769.25 ms
+iter: 135, t_iter: 4769.29 ms
+iter: 136, t_iter: 4769.09 ms
+iter: 137, t_iter: 4769.51 ms
+iter: 138, t_iter: 4769.2 ms
+iter: 139, t_iter: 4769.1 ms
+iter: 140, t_iter: 4769.22 ms
+iter: 141, t_iter: 4769.26 ms
+iter: 142, t_iter: 4769.1 ms
+iter: 143, t_iter: 4768.97 ms
+iter: 144, t_iter: 4769.38 ms
+iter: 145, t_iter: 4769.29 ms
+iter: 146, t_iter: 4769.17 ms
+iter: 147, t_iter: 4769.19 ms
+iter: 148, t_iter: 4769.12 ms
+iter: 149, t_iter: 4769.15 ms
+iter: 150, t_iter: 4769.23 ms
+iter: 151, t_iter: 4769.15 ms
+iter: 152, t_iter: 4769.02 ms
+iter: 153, t_iter: 4769.04 ms
+iter: 154, t_iter: 4769.06 ms
+iter: 155, t_iter: 4769.12 ms
+iter: 156, t_iter: 4769.13 ms
+iter: 157, t_iter: 4769.03 ms
+iter: 158, t_iter: 4769.29 ms
+iter: 159, t_iter: 4769.37 ms
+iter: 160, t_iter: 4769.31 ms
+iter: 161, t_iter: 4769.02 ms
+iter: 162, t_iter: 4769.5 ms
+iter: 163, t_iter: 4769.26 ms
+iter: 164, t_iter: 4769.19 ms
+iter: 165, t_iter: 4769.08 ms
+iter: 166, t_iter: 4769.14 ms
+iter: 167, t_iter: 4769.3 ms
+iter: 168, t_iter: 4769.21 ms
+iter: 169, t_iter: 4769.17 ms
+iter: 170, t_iter: 4769.15 ms
+iter: 171, t_iter: 4769.06 ms
+iter: 172, t_iter: 4769.22 ms
+iter: 173, t_iter: 4769.18 ms
+iter: 174, t_iter: 4769.39 ms
+iter: 175, t_iter: 4769.18 ms
+iter: 176, t_iter: 4769.4 ms
+iter: 177, t_iter: 4769.18 ms
+iter: 178, t_iter: 4769.11 ms
+iter: 179, t_iter: 4769.09 ms
+iter: 180, t_iter: 4769.11 ms
+iter: 181, t_iter: 4769.23 ms
+iter: 182, t_iter: 4769.03 ms
+iter: 183, t_iter: 4769.19 ms
+iter: 184, t_iter: 4769.24 ms
+iter: 185, t_iter: 4769.2 ms
+iter: 186, t_iter: 4769.38 ms
+iter: 187, t_iter: 4769.1 ms
+iter: 188, t_iter: 4769.11 ms
+iter: 189, t_iter: 4769.09 ms
+iter: 190, t_iter: 4769.08 ms
+iter: 191, t_iter: 4769.29 ms
+iter: 192, t_iter: 4769.26 ms
+iter: 193, t_iter: 4769.31 ms
+iter: 194, t_iter: 4769.28 ms
+iter: 195, t_iter: 4769.34 ms
+iter: 196, t_iter: 4769.09 ms
+iter: 197, t_iter: 4769.07 ms
+iter: 198, t_iter: 4769.17 ms
+iter: 199, t_iter: 4769.17 ms
+iter: 200, t_iter: 4769.45 ms
+iter: 201, t_iter: 4768.71 ms
+iter: 202, t_iter: 4768.53 ms
+iter: 203, t_iter: 4769.24 ms
+iter: 204, t_iter: 4769.24 ms
+iter: 205, t_iter: 4769.03 ms
+iter: 206, t_iter: 4769.25 ms
+iter: 207, t_iter: 4769.16 ms
+iter: 208, t_iter: 4769.13 ms
+iter: 209, t_iter: 4769.13 ms
+iter: 210, t_iter: 4769.28 ms
+iter: 211, t_iter: 4768.98 ms
+iter: 212, t_iter: 4769.31 ms
+iter: 213, t_iter: 4769.13 ms
+iter: 214, t_iter: 4769.18 ms
+iter: 215, t_iter: 4769.27 ms
+iter: 216, t_iter: 4769.23 ms
+iter: 217, t_iter: 4769.35 ms
+iter: 218, t_iter: 4769.28 ms
+iter: 219, t_iter: 4769.14 ms
+iter: 220, t_iter: 4769.32 ms
+iter: 221, t_iter: 4769.19 ms
+iter: 222, t_iter: 4769.35 ms
+iter: 223, t_iter: 4769.39 ms
+iter: 224, t_iter: 4769.16 ms
+iter: 225, t_iter: 4769.31 ms
+iter: 226, t_iter: 4769.28 ms
+iter: 227, t_iter: 4769.21 ms
+iter: 228, t_iter: 4769.43 ms
+iter: 229, t_iter: 4769.1 ms
+iter: 230, t_iter: 4769.26 ms
+iter: 231, t_iter: 4769.17 ms
+iter: 232, t_iter: 4769.15 ms
+iter: 233, t_iter: 4769.12 ms
+iter: 234, t_iter: 4769.34 ms
+iter: 235, t_iter: 4769.15 ms
+iter: 236, t_iter: 4769.09 ms
+iter: 237, t_iter: 4769.4 ms
+iter: 238, t_iter: 4769.09 ms
+iter: 239, t_iter: 4769.22 ms
+iter: 240, t_iter: 4769.29 ms
+iter: 241, t_iter: 4769.21 ms
+iter: 242, t_iter: 4769.26 ms
+iter: 243, t_iter: 4769.22 ms
+iter: 244, t_iter: 4769.03 ms
+iter: 245, t_iter: 4769.27 ms
+iter: 246, t_iter: 4768.96 ms
+iter: 247, t_iter: 4769.12 ms
+iter: 248, t_iter: 4769.15 ms
+iter: 249, t_iter: 4769.13 ms
+iter: 250, t_iter: 4769 ms
+iter: 251, t_iter: 4769.13 ms
+iter: 252, t_iter: 4769.21 ms
+iter: 253, t_iter: 4769.17 ms
+iter: 254, t_iter: 4769.09 ms
+iter: 255, t_iter: 4769.49 ms
+iter: 256, t_iter: 4769.07 ms
+iter: 257, t_iter: 4769.06 ms
+iter: 258, t_iter: 4769.06 ms
+iter: 259, t_iter: 4769.06 ms
+iter: 260, t_iter: 4769.19 ms
+iter: 261, t_iter: 4769.07 ms
+iter: 262, t_iter: 4769.17 ms
+iter: 263, t_iter: 4769.35 ms
+iter: 264, t_iter: 4769.53 ms
+iter: 265, t_iter: 4769.14 ms
+iter: 266, t_iter: 4769.19 ms
+iter: 267, t_iter: 4769.3 ms
+iter: 268, t_iter: 4769.33 ms
+iter: 269, t_iter: 4769.35 ms
+iter: 270, t_iter: 4769.23 ms
+iter: 271, t_iter: 4769.16 ms
+iter: 272, t_iter: 4769.09 ms
+iter: 273, t_iter: 4769.01 ms
+iter: 274, t_iter: 4769.22 ms
+iter: 275, t_iter: 4769.01 ms
+iter: 276, t_iter: 4769.15 ms
+iter: 277, t_iter: 4769.18 ms
+iter: 278, t_iter: 4769.15 ms
+iter: 279, t_iter: 4769.44 ms
+iter: 280, t_iter: 4769.31 ms
+iter: 281, t_iter: 4769.09 ms
+iter: 282, t_iter: 4769.19 ms
+iter: 283, t_iter: 4769.22 ms
+iter: 284, t_iter: 4769.26 ms
+iter: 285, t_iter: 4769.24 ms
+iter: 286, t_iter: 4769.03 ms
+iter: 287, t_iter: 4769.08 ms
+iter: 288, t_iter: 4769.39 ms
+iter: 289, t_iter: 4769.09 ms
+iter: 290, t_iter: 4769.13 ms
+iter: 291, t_iter: 4769.31 ms
+iter: 292, t_iter: 4769.19 ms
+iter: 293, t_iter: 4769.21 ms
+iter: 294, t_iter: 4769.2 ms
+iter: 295, t_iter: 4769.17 ms
+iter: 296, t_iter: 4769.23 ms
+iter: 297, t_iter: 4769.07 ms
+iter: 298, t_iter: 4769 ms
+iter: 299, t_iter: 4769.22 ms
+iter: 300, t_iter: 4769.49 ms
+iter: 301, t_iter: 4768.73 ms
+iter: 302, t_iter: 4768.74 ms
+iter: 303, t_iter: 4768.67 ms
+iter: 304, t_iter: 4769.06 ms
+iter: 305, t_iter: 4769.26 ms
+iter: 306, t_iter: 4769.23 ms
+iter: 307, t_iter: 4768.99 ms
+iter: 308, t_iter: 4769.12 ms
+iter: 309, t_iter: 4769.06 ms
+iter: 310, t_iter: 4769.22 ms
+iter: 311, t_iter: 4769.04 ms
+iter: 312, t_iter: 4768.99 ms
+iter: 313, t_iter: 4769.34 ms
+iter: 314, t_iter: 4769.21 ms
+iter: 315, t_iter: 4769.21 ms
+iter: 316, t_iter: 4769.17 ms
+iter: 317, t_iter: 4769.19 ms
+iter: 318, t_iter: 4769.12 ms
+iter: 319, t_iter: 4769.24 ms
+iter: 320, t_iter: 4769.24 ms
+iter: 321, t_iter: 4769.29 ms
+iter: 322, t_iter: 4769.65 ms
+iter: 323, t_iter: 4769.2 ms
+iter: 324, t_iter: 4769.21 ms
+iter: 325, t_iter: 4769.35 ms
+iter: 326, t_iter: 4769.23 ms
+iter: 327, t_iter: 4769.03 ms
+iter: 328, t_iter: 4769.32 ms
+iter: 329, t_iter: 4768.99 ms
+iter: 330, t_iter: 4769.22 ms
+iter: 331, t_iter: 4769.29 ms
+iter: 332, t_iter: 4769.13 ms
+iter: 333, t_iter: 4769.19 ms
+iter: 334, t_iter: 4769.11 ms
+iter: 335, t_iter: 4769.27 ms
+iter: 336, t_iter: 4769.04 ms
+iter: 337, t_iter: 4769.17 ms
+iter: 338, t_iter: 4769.08 ms
+iter: 339, t_iter: 4769.14 ms
+iter: 340, t_iter: 4769.12 ms
+iter: 341, t_iter: 4769.24 ms
+iter: 342, t_iter: 4769.25 ms
+iter: 343, t_iter: 4769.27 ms
+iter: 344, t_iter: 4768.98 ms
+iter: 345, t_iter: 4769.26 ms
+iter: 346, t_iter: 4769.59 ms
+iter: 347, t_iter: 4769.09 ms
+iter: 348, t_iter: 4769.26 ms
+iter: 349, t_iter: 4769.22 ms
+iter: 350, t_iter: 4769.13 ms
+iter: 351, t_iter: 4769.26 ms
+iter: 352, t_iter: 4769.04 ms
+iter: 353, t_iter: 4769.07 ms
+iter: 354, t_iter: 4769.06 ms
+iter: 355, t_iter: 4769.19 ms
+iter: 356, t_iter: 4769.05 ms
+iter: 357, t_iter: 4769.15 ms
+iter: 358, t_iter: 4769.14 ms
+iter: 359, t_iter: 4768.97 ms
+iter: 360, t_iter: 4769.16 ms
+iter: 361, t_iter: 4769.3 ms
+iter: 362, t_iter: 4769.13 ms
+iter: 363, t_iter: 4769.26 ms
+iter: 364, t_iter: 4769.11 ms
+iter: 365, t_iter: 4769.09 ms
+iter: 366, t_iter: 4769.03 ms
+iter: 367, t_iter: 4769.04 ms
+iter: 368, t_iter: 4769.21 ms
+iter: 369, t_iter: 4769.13 ms
+iter: 370, t_iter: 4769.41 ms
+iter: 371, t_iter: 4769.23 ms
+iter: 372, t_iter: 4769.33 ms
+iter: 373, t_iter: 4768.99 ms
+iter: 374, t_iter: 4769.12 ms
+iter: 375, t_iter: 4769.22 ms
+iter: 376, t_iter: 4769.07 ms
+iter: 377, t_iter: 4769.13 ms
+iter: 378, t_iter: 4769.12 ms
+iter: 379, t_iter: 4769.09 ms
+iter: 380, t_iter: 4769.21 ms
+iter: 381, t_iter: 4769.19 ms
+iter: 382, t_iter: 4769.3 ms
+iter: 383, t_iter: 4769.24 ms
+iter: 384, t_iter: 4769.3 ms
+iter: 385, t_iter: 4769.2 ms
+iter: 386, t_iter: 4769.35 ms
+iter: 387, t_iter: 4769.18 ms
+iter: 388, t_iter: 4769.28 ms
+iter: 389, t_iter: 4769.29 ms
+iter: 390, t_iter: 4769.11 ms
+iter: 391, t_iter: 4769.2 ms
+iter: 392, t_iter: 4769.24 ms
+iter: 393, t_iter: 4769.26 ms
+iter: 394, t_iter: 4769.12 ms
+iter: 395, t_iter: 4769.13 ms
+iter: 396, t_iter: 4769.04 ms
+iter: 397, t_iter: 4769.25 ms
+iter: 398, t_iter: 4769.3 ms
+iter: 399, t_iter: 4769.39 ms
+iter: 400, t_iter: 4769.49 ms
+iter: 401, t_iter: 4769.08 ms
+iter: 402, t_iter: 4769.12 ms
+iter: 403, t_iter: 4769.11 ms
+iter: 404, t_iter: 4769.25 ms
+iter: 405, t_iter: 4769.06 ms
+iter: 406, t_iter: 4769.3 ms
+iter: 407, t_iter: 4769.2 ms
+iter: 408, t_iter: 4768.99 ms
+iter: 409, t_iter: 4769.15 ms
+iter: 410, t_iter: 4769.07 ms
+iter: 411, t_iter: 4769.2 ms
+iter: 412, t_iter: 4769.15 ms
+iter: 413, t_iter: 4769.24 ms
+iter: 414, t_iter: 4769.19 ms
+iter: 415, t_iter: 4769.06 ms
+iter: 416, t_iter: 4769.23 ms
+iter: 417, t_iter: 4769.06 ms
+iter: 418, t_iter: 4769.29 ms
+iter: 419, t_iter: 4769.08 ms
+iter: 420, t_iter: 4769.33 ms
+iter: 421, t_iter: 4769.28 ms
+iter: 422, t_iter: 4769.26 ms
+iter: 423, t_iter: 4769.12 ms
+iter: 424, t_iter: 4769.23 ms
+iter: 425, t_iter: 4769.31 ms
+iter: 426, t_iter: 4769.13 ms
+iter: 427, t_iter: 4769.29 ms
+iter: 428, t_iter: 4769.08 ms
+iter: 429, t_iter: 4769.25 ms
+iter: 430, t_iter: 4769.23 ms
+iter: 431, t_iter: 4769.18 ms
+iter: 432, t_iter: 4769.27 ms
+iter: 433, t_iter: 4769.23 ms
+iter: 434, t_iter: 4769.2 ms
+iter: 435, t_iter: 4769.4 ms
+iter: 436, t_iter: 4769.15 ms
+iter: 437, t_iter: 4769.18 ms
+iter: 438, t_iter: 4769.01 ms
+iter: 439, t_iter: 4769.21 ms
+iter: 440, t_iter: 4769.12 ms
+iter: 441, t_iter: 4769.06 ms
+iter: 442, t_iter: 4769.07 ms
+iter: 443, t_iter: 4769.34 ms
+iter: 444, t_iter: 4769.13 ms
+iter: 445, t_iter: 4769.1 ms
+iter: 446, t_iter: 4769.18 ms
+iter: 447, t_iter: 4769.03 ms
+iter: 448, t_iter: 4769.02 ms
+iter: 449, t_iter: 4769.17 ms
+iter: 450, t_iter: 4769.23 ms
+iter: 451, t_iter: 4769.26 ms
+iter: 452, t_iter: 4769.01 ms
+iter: 453, t_iter: 4769.06 ms
+iter: 454, t_iter: 4769.23 ms
+iter: 455, t_iter: 4769.08 ms
+iter: 456, t_iter: 4769.21 ms
+iter: 457, t_iter: 4769.22 ms
+iter: 458, t_iter: 4769.15 ms
+iter: 459, t_iter: 4769.47 ms
+iter: 460, t_iter: 4769.04 ms
+iter: 461, t_iter: 4769.01 ms
+iter: 462, t_iter: 4769.1 ms
+iter: 463, t_iter: 4769.23 ms
+iter: 464, t_iter: 4769.19 ms
+iter: 465, t_iter: 4768.98 ms
+iter: 466, t_iter: 4769.11 ms
+iter: 467, t_iter: 4769.04 ms
+iter: 468, t_iter: 4769.23 ms
+iter: 469, t_iter: 4769.19 ms
+iter: 470, t_iter: 4768.98 ms
+iter: 471, t_iter: 4769.04 ms
+iter: 472, t_iter: 4769.1 ms
+iter: 473, t_iter: 4768.95 ms
+iter: 474, t_iter: 4769.06 ms
+iter: 475, t_iter: 4769.09 ms
+iter: 476, t_iter: 4769.12 ms
+iter: 477, t_iter: 4769.19 ms
+iter: 478, t_iter: 4769.04 ms
+iter: 479, t_iter: 4769.16 ms
+iter: 480, t_iter: 4768.94 ms
+iter: 481, t_iter: 4769.04 ms
+iter: 482, t_iter: 4769.06 ms
+iter: 483, t_iter: 4769.19 ms
+iter: 484, t_iter: 4769.48 ms
+iter: 485, t_iter: 4769.16 ms
+iter: 486, t_iter: 4768.97 ms
+iter: 487, t_iter: 4769.03 ms
+iter: 488, t_iter: 4769.11 ms
+iter: 489, t_iter: 4769.05 ms
+iter: 490, t_iter: 4768.93 ms
+iter: 491, t_iter: 4769.03 ms
+iter: 492, t_iter: 4769.05 ms
+iter: 493, t_iter: 4769.11 ms
+iter: 494, t_iter: 4769.21 ms
+iter: 495, t_iter: 4768.95 ms
+iter: 496, t_iter: 4769 ms
+iter: 497, t_iter: 4769.15 ms
+iter: 498, t_iter: 4768.98 ms
+iter: 499, t_iter: 4769.06 ms
+t_cuda_alloc = 21.536 ms
+t_compute_total = 2384911.728 ms
+t_compute_avg   = 4769.823 ms
+t_end2end       = 2574083.296 ms 
+ ================== 
+Collecting data...
+Generating '/tmp/nsys-report-c838.qdstrm'
+[1/1] [0%                          ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [0%                          ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [5%                          ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [6%                          ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [7%                          ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [8%                          ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [9%                          ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [10%                         ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [11%                         ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [12%                         ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [13%                         ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [14%                         ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [=15%                        ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [=16%                        ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [=17%                        ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [==18%                       ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [==19%                       ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [==20%                       ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [==21%                       ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [===22%                      ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [===23%                      ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [===24%                      ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [====25%                     ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [====26%                     ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [====27%                     ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [====28%                     ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [=====29%                    ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [=====30%                    ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [=====31%                    ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [=====32%                    ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [======33%                   ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [======34%                   ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [======35%                   ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [=======36%                  ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [=======37%                  ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [=======38%                  ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [=======39%                  ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [========40%                 ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [========41%                 ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [========42%                 ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [=========43%                ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [=========44%                ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [=========45%                ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [=========46%                ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [==========47%               ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [==========48%               ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [==========49%               ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [===========50%              ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [===========51%              ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [===========52%              ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [===========53%              ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [============54%             ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [============55%             ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [============56%             ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [============57%             ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [=============58%            ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [=============59%            ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [=============60%            ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [==============61%           ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [==============62%           ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [==============63%           ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [==============64%           ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [===============65%          ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [===============66%          ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [===============67%          ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [================68%         ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [================69%         ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [================70%         ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [================71%         ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [=================72%        ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [=================73%        ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [=================74%        ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [==================75%       ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [==================76%       ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [==================77%       ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [==================78%       ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [===================79%      ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [===================80%      ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [===================81%      ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [===================82%      ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [====================83%     ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [====================84%     ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [====================85%     ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [=====================86%    ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [=====================87%    ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [=====================88%    ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [=====================89%    ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [======================90%   ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [======================91%   ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [======================92%   ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [=======================93%  ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [=======================94%  ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [=======================95%  ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [=======================96%  ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [========================97% ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [========================98% ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [========================99% ] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [========================100%] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep[1/1] [========================100%] um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep
+Generated:
+    /home/users/amei/gemm_spmm_a100/gemm_managed_explicit/um_profile_managed_A_10k_mem_advise_readmostly.nsys-rep

@@ -1,16 +1,14 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CUDA"
   )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CUDA
-  "/home/users/amei/gemm_spmm_a100/gemm_managed_explicit/cublas_gemm_example_explicit_A.cu" "/home/users/amei/gemm_spmm_a100/gemm_managed_explicit/CMakeFiles/cublas_gemm_example_explicit_A.dir/cublas_gemm_example_explicit_A.cu.o"
-  )
-set(CMAKE_CUDA_COMPILER_ID "NVIDIA")
 
-# The include file search paths:
-set(CMAKE_CUDA_TARGET_INCLUDE_PATH
-  "utils"
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/users/amei/gemm_spmm_a100/gemm_managed_explicit/cublas_gemm_example_explicit_A.cu" "CMakeFiles/cublas_gemm_example_explicit_A.dir/cublas_gemm_example_explicit_A.cu.o" "gcc" "CMakeFiles/cublas_gemm_example_explicit_A.dir/cublas_gemm_example_explicit_A.cu.o.d"
   )
 
 # Targets to which this target links.

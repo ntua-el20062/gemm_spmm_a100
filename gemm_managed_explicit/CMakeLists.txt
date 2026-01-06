@@ -70,6 +70,7 @@ add_cublas_example(cublas_examples "cublas_${ROUTINE}_example_managed_C" cublas_
 add_cublas_example(cublas_examples "cublas_${ROUTINE}_example_managed_C_mem_advise" cublas_${ROUTINE}_example_managed_C_mem_advise.cu)
 add_cublas_example(cublas_examples "cublas_${ROUTINE}_example_explicit_C" cublas_${ROUTINE}_example_explicit_C.cu)
 add_cublas_example(cublas_examples "cublas_${ROUTINE}_example_explicit_A" cublas_${ROUTINE}_example_explicit_A.cu)
+add_cublas_example(cublas_examples "cublas_${ROUTINE}_example_managed_A_mem_advise_readmostly" cublas_${ROUTINE}_example_managed_A_mem_advise_readmostly.cu)
 
 
 # ##########################################

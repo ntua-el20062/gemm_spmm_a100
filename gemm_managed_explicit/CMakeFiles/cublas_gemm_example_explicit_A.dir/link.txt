@@ -1,1 +1,1 @@
-/usr/bin/g++ CMakeFiles/cublas_gemm_example_explicit_A.dir/cublas_gemm_example_explicit_A.cu.o -o cublas_gemm_example_explicit_A  -lcublas -lcudadevrt -lcudart_static -lrt -lpthread -ldl  -L"/usr/local/cuda-12.5/targets/x86_64-linux/lib/stubs" -L"/usr/local/cuda-12.5/targets/x86_64-linux/lib"
+/usr/bin/g++ @CMakeFiles/cublas_gemm_example_explicit_A.dir/objects1 -o cublas_gemm_example_explicit_A @CMakeFiles/cublas_gemm_example_explicit_A.dir/linkLibs.rsp -L"/usr/local/cuda-12.6/targets/x86_64-linux/lib/stubs" -L"/usr/local/cuda-12.6/targets/x86_64-linux/lib"
