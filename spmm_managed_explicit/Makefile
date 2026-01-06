@@ -5,9 +5,15 @@ LIBS        = -lcusparse
 NVCC_FLAGS += -arch=sm_80
 NVCC_FLAGS += -lineinfo
 
-TARGETS = spmm_managed_A spmm_explicit_A spmm_managed_C spmm_managed_A_mem_advise spmm_managed_C_mem_advise
+TARGETS = spmm_managed_A_mem_advise_read_mostly spmm_managed_C_mem_advise_read_mostly spmm_managed_A spmm_explicit_A spmm_managed_C spmm_managed_A_mem_advise spmm_managed_C_mem_advise
 
 all: $(TARGETS)
+
+spmm_managed_A_mem_advise_read_mostly: spmm_managed_A_mem_advise_read_mostly.cu
+	$(NVCC) $(NVCC_FLAGS) $< $(LIBS) -o $@
+
+spmm_managed_C_mem_advise_read_mostly: spmm_managed_C_mem_advise_read_mostly.cu
+	$(NVCC) $(NVCC_FLAGS) $< $(LIBS) -o $@
 
 spmm_managed_A_mem_advise: spmm_managed_A_mem_advise.cu
 	$(NVCC) $(NVCC_FLAGS) $< $(LIBS) -o $@
