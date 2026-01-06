@@ -146,12 +146,11 @@ int main(int argc, char *argv[]) {
 
     double t_cuda_alloc = wtime();
     CUDA_CHECK(cudaMallocManaged(&d_A, bytesA));
-    //cudaMemLocation location = {.type = cudaMemLocationTypeHost};
-    //cudaMemAdvise(d_A, sizeA * sizeof(data_type), cudaMemAdviseSetAccessedBy, location);
-
     int deviceId = 0;
+    
     cudaMemAdvise(d_A, bytesA, cudaMemAdviseSetAccessedBy, (int)-1);
     cudaMemAdvise(d_A, bytesA, cudaMemAdviseSetReadMostly, deviceId);
+    
     memlog.sample(wtime());
     CUDA_CHECK(cudaMallocManaged(&d_B, bytesB));
     memlog.sample(wtime());
