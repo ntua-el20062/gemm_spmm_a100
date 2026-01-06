@@ -71,6 +71,7 @@ all: CMakeFiles/cublas_gemm_example_managed_C_mem_advise.dir/all
 all: CMakeFiles/cublas_gemm_example_explicit_C.dir/all
 all: CMakeFiles/cublas_gemm_example_explicit_A.dir/all
 all: CMakeFiles/cublas_gemm_example_managed_A_mem_advise_readmostly.dir/all
+all: CMakeFiles/cublas_gemm_example_managed_C_mem_advise_readmostly.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -87,20 +88,22 @@ clean: CMakeFiles/cublas_gemm_example_managed_C_mem_advise.dir/clean
 clean: CMakeFiles/cublas_gemm_example_explicit_C.dir/clean
 clean: CMakeFiles/cublas_gemm_example_explicit_A.dir/clean
 clean: CMakeFiles/cublas_gemm_example_managed_A_mem_advise_readmostly.dir/clean
+clean: CMakeFiles/cublas_gemm_example_managed_C_mem_advise_readmostly.dir/clean
 .PHONY : clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/cublas_examples.dir
 
 # All Build rule for target.
-CMakeFiles/cublas_examples.dir/all: CMakeFiles/cublas_gemm_example_managed_A_mem_advise_readmostly.dir/all
+CMakeFiles/cublas_examples.dir/all: CMakeFiles/cublas_gemm_example_explicit_C.dir/all
+CMakeFiles/cublas_examples.dir/all: CMakeFiles/cublas_gemm_example_explicit_A.dir/all
+CMakeFiles/cublas_examples.dir/all: CMakeFiles/cublas_gemm_example.dir/all
 CMakeFiles/cublas_examples.dir/all: CMakeFiles/cublas_gemm_example_managed_A.dir/all
 CMakeFiles/cublas_examples.dir/all: CMakeFiles/cublas_gemm_example_managed_A_mem_advise.dir/all
 CMakeFiles/cublas_examples.dir/all: CMakeFiles/cublas_gemm_example_managed_C.dir/all
 CMakeFiles/cublas_examples.dir/all: CMakeFiles/cublas_gemm_example_managed_C_mem_advise.dir/all
-CMakeFiles/cublas_examples.dir/all: CMakeFiles/cublas_gemm_example_explicit_C.dir/all
-CMakeFiles/cublas_examples.dir/all: CMakeFiles/cublas_gemm_example_explicit_A.dir/all
-CMakeFiles/cublas_examples.dir/all: CMakeFiles/cublas_gemm_example.dir/all
+CMakeFiles/cublas_examples.dir/all: CMakeFiles/cublas_gemm_example_managed_A_mem_advise_readmostly.dir/all
+CMakeFiles/cublas_examples.dir/all: CMakeFiles/cublas_gemm_example_managed_C_mem_advise_readmostly.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cublas_examples.dir/build.make CMakeFiles/cublas_examples.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cublas_examples.dir/build.make CMakeFiles/cublas_examples.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/users/amei/gemm_spmm_a100/gemm_managed_explicit/CMakeFiles --progress-num= "Built target cublas_examples"
@@ -108,7 +111,7 @@ CMakeFiles/cublas_examples.dir/all: CMakeFiles/cublas_gemm_example.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/cublas_examples.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/users/amei/gemm_spmm_a100/gemm_managed_explicit/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/users/amei/gemm_spmm_a100/gemm_managed_explicit/CMakeFiles 18
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/cublas_examples.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/users/amei/gemm_spmm_a100/gemm_managed_explicit/CMakeFiles 0
 .PHONY : CMakeFiles/cublas_examples.dir/rule
@@ -329,6 +332,32 @@ cublas_gemm_example_managed_A_mem_advise_readmostly: CMakeFiles/cublas_gemm_exam
 CMakeFiles/cublas_gemm_example_managed_A_mem_advise_readmostly.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cublas_gemm_example_managed_A_mem_advise_readmostly.dir/build.make CMakeFiles/cublas_gemm_example_managed_A_mem_advise_readmostly.dir/clean
 .PHONY : CMakeFiles/cublas_gemm_example_managed_A_mem_advise_readmostly.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/cublas_gemm_example_managed_C_mem_advise_readmostly.dir
+
+# All Build rule for target.
+CMakeFiles/cublas_gemm_example_managed_C_mem_advise_readmostly.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cublas_gemm_example_managed_C_mem_advise_readmostly.dir/build.make CMakeFiles/cublas_gemm_example_managed_C_mem_advise_readmostly.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cublas_gemm_example_managed_C_mem_advise_readmostly.dir/build.make CMakeFiles/cublas_gemm_example_managed_C_mem_advise_readmostly.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/users/amei/gemm_spmm_a100/gemm_managed_explicit/CMakeFiles --progress-num=17,18 "Built target cublas_gemm_example_managed_C_mem_advise_readmostly"
+.PHONY : CMakeFiles/cublas_gemm_example_managed_C_mem_advise_readmostly.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/cublas_gemm_example_managed_C_mem_advise_readmostly.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/users/amei/gemm_spmm_a100/gemm_managed_explicit/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/cublas_gemm_example_managed_C_mem_advise_readmostly.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/users/amei/gemm_spmm_a100/gemm_managed_explicit/CMakeFiles 0
+.PHONY : CMakeFiles/cublas_gemm_example_managed_C_mem_advise_readmostly.dir/rule
+
+# Convenience name for target.
+cublas_gemm_example_managed_C_mem_advise_readmostly: CMakeFiles/cublas_gemm_example_managed_C_mem_advise_readmostly.dir/rule
+.PHONY : cublas_gemm_example_managed_C_mem_advise_readmostly
+
+# clean rule for target.
+CMakeFiles/cublas_gemm_example_managed_C_mem_advise_readmostly.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cublas_gemm_example_managed_C_mem_advise_readmostly.dir/build.make CMakeFiles/cublas_gemm_example_managed_C_mem_advise_readmostly.dir/clean
+.PHONY : CMakeFiles/cublas_gemm_example_managed_C_mem_advise_readmostly.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

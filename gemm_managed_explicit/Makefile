@@ -278,6 +278,19 @@ cublas_gemm_example_managed_A_mem_advise_readmostly/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cublas_gemm_example_managed_A_mem_advise_readmostly.dir/build.make CMakeFiles/cublas_gemm_example_managed_A_mem_advise_readmostly.dir/build
 .PHONY : cublas_gemm_example_managed_A_mem_advise_readmostly/fast
 
+#=============================================================================
+# Target rules for targets named cublas_gemm_example_managed_C_mem_advise_readmostly
+
+# Build rule for target.
+cublas_gemm_example_managed_C_mem_advise_readmostly: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cublas_gemm_example_managed_C_mem_advise_readmostly
+.PHONY : cublas_gemm_example_managed_C_mem_advise_readmostly
+
+# fast build rule for target.
+cublas_gemm_example_managed_C_mem_advise_readmostly/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cublas_gemm_example_managed_C_mem_advise_readmostly.dir/build.make CMakeFiles/cublas_gemm_example_managed_C_mem_advise_readmostly.dir/build
+.PHONY : cublas_gemm_example_managed_C_mem_advise_readmostly/fast
+
 cublas_gemm_example.o: cublas_gemm_example.cu.o
 .PHONY : cublas_gemm_example.o
 
@@ -470,6 +483,30 @@ cublas_gemm_example_managed_C_mem_advise.cu.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cublas_gemm_example_managed_C_mem_advise.dir/build.make CMakeFiles/cublas_gemm_example_managed_C_mem_advise.dir/cublas_gemm_example_managed_C_mem_advise.cu.s
 .PHONY : cublas_gemm_example_managed_C_mem_advise.cu.s
 
+cublas_gemm_example_managed_C_mem_advise_readmostly.o: cublas_gemm_example_managed_C_mem_advise_readmostly.cu.o
+.PHONY : cublas_gemm_example_managed_C_mem_advise_readmostly.o
+
+# target to build an object file
+cublas_gemm_example_managed_C_mem_advise_readmostly.cu.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cublas_gemm_example_managed_C_mem_advise_readmostly.dir/build.make CMakeFiles/cublas_gemm_example_managed_C_mem_advise_readmostly.dir/cublas_gemm_example_managed_C_mem_advise_readmostly.cu.o
+.PHONY : cublas_gemm_example_managed_C_mem_advise_readmostly.cu.o
+
+cublas_gemm_example_managed_C_mem_advise_readmostly.i: cublas_gemm_example_managed_C_mem_advise_readmostly.cu.i
+.PHONY : cublas_gemm_example_managed_C_mem_advise_readmostly.i
+
+# target to preprocess a source file
+cublas_gemm_example_managed_C_mem_advise_readmostly.cu.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cublas_gemm_example_managed_C_mem_advise_readmostly.dir/build.make CMakeFiles/cublas_gemm_example_managed_C_mem_advise_readmostly.dir/cublas_gemm_example_managed_C_mem_advise_readmostly.cu.i
+.PHONY : cublas_gemm_example_managed_C_mem_advise_readmostly.cu.i
+
+cublas_gemm_example_managed_C_mem_advise_readmostly.s: cublas_gemm_example_managed_C_mem_advise_readmostly.cu.s
+.PHONY : cublas_gemm_example_managed_C_mem_advise_readmostly.s
+
+# target to generate assembly for a file
+cublas_gemm_example_managed_C_mem_advise_readmostly.cu.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cublas_gemm_example_managed_C_mem_advise_readmostly.dir/build.make CMakeFiles/cublas_gemm_example_managed_C_mem_advise_readmostly.dir/cublas_gemm_example_managed_C_mem_advise_readmostly.cu.s
+.PHONY : cublas_gemm_example_managed_C_mem_advise_readmostly.cu.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -491,6 +528,7 @@ help:
 	@echo "... cublas_gemm_example_managed_A_mem_advise_readmostly"
 	@echo "... cublas_gemm_example_managed_C"
 	@echo "... cublas_gemm_example_managed_C_mem_advise"
+	@echo "... cublas_gemm_example_managed_C_mem_advise_readmostly"
 	@echo "... cublas_gemm_example.o"
 	@echo "... cublas_gemm_example.i"
 	@echo "... cublas_gemm_example.s"
@@ -515,6 +553,9 @@ help:
 	@echo "... cublas_gemm_example_managed_C_mem_advise.o"
 	@echo "... cublas_gemm_example_managed_C_mem_advise.i"
 	@echo "... cublas_gemm_example_managed_C_mem_advise.s"
+	@echo "... cublas_gemm_example_managed_C_mem_advise_readmostly.o"
+	@echo "... cublas_gemm_example_managed_C_mem_advise_readmostly.i"
+	@echo "... cublas_gemm_example_managed_C_mem_advise_readmostly.s"
 .PHONY : help
 
 

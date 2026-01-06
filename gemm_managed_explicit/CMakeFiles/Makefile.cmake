@@ -144,4 +144,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/cublas_gemm_example_explicit_C.dir/DependInfo.cmake"
   "CMakeFiles/cublas_gemm_example_explicit_A.dir/DependInfo.cmake"
   "CMakeFiles/cublas_gemm_example_managed_A_mem_advise_readmostly.dir/DependInfo.cmake"
+  "CMakeFiles/cublas_gemm_example_managed_C_mem_advise_readmostly.dir/DependInfo.cmake"
   )
