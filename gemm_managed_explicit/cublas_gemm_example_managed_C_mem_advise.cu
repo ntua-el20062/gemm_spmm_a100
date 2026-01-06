@@ -150,6 +150,7 @@ int main(int argc, char *argv[]) {
     CUDA_CHECK(cudaMallocManaged(&d_B, bytesB));
     memlog.sample(wtime());
     CUDA_CHECK(cudaMallocManaged(&d_C, bytesC));
+    cudaMemAdvise(d_C, bytesC, cudaMemAdviseSetAccessedBy, (int)-1);
     t_cuda_alloc = 1e3*(wtime() - t_cuda_alloc);
 
     memlog.sample(wtime()); //after UM alloc
