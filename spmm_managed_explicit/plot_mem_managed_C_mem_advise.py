@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 csv_path = "memlog_managed_C_mem_advise.csv"
-out_png  = "plots/mem_usage_managed_C_mem_advise.png"
+out_png  = "plots/mem_usage_managed_C_mem_advise_read_mostly.png"
 
 t = []
 sys_mb = []
@@ -45,7 +45,7 @@ plt.plot(
 
 plt.xlabel("t (s)")
 plt.ylabel("memory (MB)")
-plt.title("Memory usage over time (Managed, CPU writing C, with mem Advise)")
+plt.title("Memory usage over time (Managed, CPU writing C, with mem Advise and read mostly)")
 plt.grid(True, alpha=0.3)
 plt.legend()
 

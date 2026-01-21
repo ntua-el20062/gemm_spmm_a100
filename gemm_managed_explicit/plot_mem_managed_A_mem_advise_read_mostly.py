@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 csv_path = "memlog_managed_A_mem_advise_readmostly.csv"
-out_png  = "plots/mem_usage_managed_A_mem_advise_read_mostly.png"
+out_png  = "no_nsys/plots/mem_usage_managed_A_mem_advise_read_mostly.png"
 
 t = []
 sys_mb = []

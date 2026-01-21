@@ -151,7 +151,7 @@ int main(int argc, char *argv[]) {
     memlog.sample(wtime());
     CUDA_CHECK(cudaMallocManaged(&d_C, bytesC));
     cudaMemAdvise(d_C, bytesC, cudaMemAdviseSetAccessedBy, (int)-1);
-    cudaMemAdvise(d_A, bytesA, cudaMemAdviseSetReadMostly, (int)0); 
+    cudaMemAdvise(d_C, bytesC, cudaMemAdviseSetReadMostly, (int)0); 
     t_cuda_alloc = 1e3*(wtime() - t_cuda_alloc);
 
     memlog.sample(wtime()); //after UM alloc
@@ -169,8 +169,8 @@ int main(int argc, char *argv[]) {
         d_C[i] = 0.0;
     }
     memlog.sample(wtime());
-    iters        = 500;
-    const int spike_period = 100;
+    iters        = 1250;
+    const int spike_period = 250;
 
     std::mt19937 rng(12345);
     std::uniform_int_distribution<size_t> dist(0, sizeA - 1);

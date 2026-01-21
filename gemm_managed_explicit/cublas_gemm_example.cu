@@ -23,7 +23,7 @@
 #include <cublas_v2.h>
 #include <cuda_runtime.h>
 #include <ctime>
-#include "cublas_utils.h"
+#include "utils/cublas_utils.h"
 
 
 double wtime(void)

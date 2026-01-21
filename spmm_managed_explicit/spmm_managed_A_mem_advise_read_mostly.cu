@@ -272,7 +272,7 @@ int main(int argc, char** argv) {
     double t_end2end = wtime();
 
     MemLogger memlog;
-    memlog.open("memlog_managed_A_mem_advise.csv", t_end2end);
+    memlog.open("memlog_managed_A_mem_advise_read_mostly.csv", t_end2end);
     memlog.sample(wtime());
 
     cudaStream_t stream = nullptr;
@@ -315,6 +315,10 @@ int main(int argc, char** argv) {
         cudaMemAdvise(d_vals, bytesVals, cudaMemAdviseSetAccessedBy, hostLoc);
         cudaMemAdvise(d_colInd, bytesColInd, cudaMemAdviseSetAccessedBy, hostLoc);
         cudaMemAdvise(d_rowPtr, bytesRowPtr, cudaMemAdviseSetAccessedBy, hostLoc);
+
+	cudaMemAdvise(d_vals, bytesVals, cudaMemAdviseSetReadMostly, 0);
+        cudaMemAdvise(d_colInd, bytesColInd, cudaMemAdviseSetReadMostly, 0);
+        cudaMemAdvise(d_rowPtr, bytesRowPtr, cudaMemAdviseSetReadMostly, 0);
     }
     
     std::memcpy(d_rowPtr, h_rowPtr.data(), bytesRowPtr);

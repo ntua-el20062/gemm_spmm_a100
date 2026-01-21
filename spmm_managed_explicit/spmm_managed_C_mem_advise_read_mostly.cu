@@ -249,15 +249,19 @@ int main(int argc, char** argv) {
     int iters = 1250;
 
     index_type n=0, k=0;
+
+
     if (argc >= 3) {
       n = static_cast<index_type>(std::atoi(argv[2]));
     }
+
     index_type m=0;
     std::vector<CooEntry> coo;
     if (!read_matrix_market_coo(mtx_path, m, k, coo)) {
         std::fprintf(stderr, "Failed to read MatrixMarket file: %s\n", mtx_path);
         return EXIT_FAILURE;
     }
+
 
     std::vector<index_type> h_rowPtr, h_colInd;
     std::vector<data_type>  h_vals;
@@ -272,7 +276,7 @@ int main(int argc, char** argv) {
     double t_end2end = wtime();
 
     MemLogger memlog;
-    memlog.open("memlog_managed_A_mem_advise.csv", t_end2end);
+    memlog.open("memlog_managed_C_mem_advise.csv", t_end2end);
     memlog.sample(wtime());
 
     cudaStream_t stream = nullptr;
@@ -308,22 +312,19 @@ int main(int argc, char** argv) {
     t_cuda_alloc = 1e3*(wtime() - t_cuda_alloc);
 
     memlog.sample(wtime()); // after UM alloc
-    
-    {
-        cudaMemLocation hostLoc = {.type = cudaMemLocationTypeHost, .id = 0};
-        (void)hostLoc;
-        cudaMemAdvise(d_vals, bytesVals, cudaMemAdviseSetAccessedBy, hostLoc);
-        cudaMemAdvise(d_colInd, bytesColInd, cudaMemAdviseSetAccessedBy, hostLoc);
-        cudaMemAdvise(d_rowPtr, bytesRowPtr, cudaMemAdviseSetAccessedBy, hostLoc);
-    }
-    
+
     std::memcpy(d_rowPtr, h_rowPtr.data(), bytesRowPtr);
     memlog.sample(wtime());
     std::memcpy(d_colInd, h_colInd.data(), bytesColInd);
     memlog.sample(wtime());
     std::memcpy(d_vals,   h_vals.data(),   bytesVals);
     memlog.sample(wtime());
-    
+    {
+        cudaMemLocation hostLoc = {.type = cudaMemLocationTypeHost, .id = 0};
+        (void)hostLoc;
+        cudaMemAdvise(d_C, bytesC, cudaMemAdviseSetAccessedBy, hostLoc);
+	cudaMemAdvise(d_C, bytesC, cudaMemAdviseSetReadMostly, 0);
+    }
 
     for (int col = 0; col < n; ++col) {
         for (int row = 0; row < k; ++row) {
@@ -332,6 +333,13 @@ int main(int argc, char** argv) {
     }
     memlog.sample(wtime());
     for (size_t i = 0; i < (size_t)m * (size_t)n; ++i) d_C[i] = 0.0;
+
+    /*{
+        cudaMemLocation hostLoc = {.type = cudaMemLocationTypeHost, .id = 0};
+        (void)hostLoc;
+        cudaMemAdvise(d_C, bytesC, cudaMemAdviseSetAccessedBy, hostLoc);
+    }*/
+
     memlog.sample(wtime());
 
     cusparseSpMatDescr_t matA;
@@ -386,10 +394,7 @@ int main(int argc, char** argv) {
 
     const int spike_period = 250;
     std::mt19937 rng(12345);
-    std::uniform_int_distribution<size_t> dist(0, (size_t)nnz - 1);
-    const size_t rowptr_sz = (size_t)m + 1;
-    std::uniform_int_distribution<size_t> dist_rowptr(0, rowptr_sz - 1);
-
+    std::uniform_int_distribution<size_t> dist(0, (size_t)n*(size_t)m - 1);
 
     double t_compute_total = 0.0;
 
@@ -405,9 +410,9 @@ int main(int argc, char** argv) {
             volatile double sink = 0.0;
             for (size_t i = 0; i < read_elems; ++i) {
 		    size_t idx = dist(rng);
-                    sink += d_vals[idx];          // touch values
-                    sink += (double)d_colInd[idx];
-		    sink += (double)d_rowPtr[dist_rowptr(rng)];
+                    //sink += d_vals[idx];          // touch values
+                    //sink += (double)d_colInd[idx];
+		    d_C[idx] += 0.01;
 		    if (i % 10 == 0) memlog.sample(wtime());
             }
             (void)sink;
